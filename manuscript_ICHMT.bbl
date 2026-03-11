@@ -27,8 +27,8 @@
 \newblock \bibinfo{title}{Investigation of heat transfer and hydraulic resistance in small-scale pillow-plate heat exchangers}.
 \newblock \bibinfo{journal}{Energy} \bibinfo{volume}{181}, \bibinfo{pages}{1213--1224}.
 %Type = Article
-\bibitem[{Arsenyeva et~al.(2023)Arsenyeva, Tovazhnyanskyy, Kapustenko, Kelmes and Varbanov}]{arsenyeva2023}
-\bibinfo{author}{Arsenyeva, O.}, \bibinfo{author}{Tovazhnyanskyy, L.}, \bibinfo{author}{Kapustenko, P.}, \bibinfo{author}{Kelmes, J.J.}, \bibinfo{author}{Varbanov, P.S.}, \bibinfo{year}{2023}.
+\bibitem[{Arsenyeva et~al.(2023)Arsenyeva, Tovazhnyanskyy, Kapustenko, Klemes and Varbanov}]{arsenyeva2023}
+\bibinfo{author}{Arsenyeva, O.}, \bibinfo{author}{Tovazhnyanskyy, L.}, \bibinfo{author}{Kapustenko, P.}, \bibinfo{author}{Klemes, J.J.}, \bibinfo{author}{Varbanov, P.S.}, \bibinfo{year}{2023}.
 \newblock \bibinfo{title}{Review of developments in plate heat exchanger heat transfer enhancement for single-phase applications in process industries}.
 \newblock \bibinfo{journal}{Energies} \bibinfo{volume}{16}, \bibinfo{pages}{4976}.
 %Type = Article
@@ -79,7 +79,7 @@
 %Type = Article
 \bibitem[{Hamedi et~al.(2024)Hamedi, Setayeshfar, Sadat, Farshidianfar, Mahvan and Asadi}]{hamedi2024}
 \bibinfo{author}{Hamedi, H.}, \bibinfo{author}{Setayeshfar, B.}, \bibinfo{author}{Sadat, M.}, \bibinfo{author}{Farshidianfar, A.}, \bibinfo{author}{Mahvan, A.}, \bibinfo{author}{Asadi, M.}, \bibinfo{year}{2024}.
-\newblock \bibinfo{title}{Experimental and numerical analysis of the thermos-hydraulic performance of a cross-flow air-to-gas capsule-type plate heat exchanger}.
+\newblock \bibinfo{title}{Experimental and numerical analysis of the thermo-hydraulic performance of a cross-flow air-to-gas capsule-type plate heat exchanger}.
 \newblock \bibinfo{journal}{Applied Thermal Engineering} \bibinfo{volume}{236}, \bibinfo{pages}{121900}.
 %Type = Article
 \bibitem[{Huang et~al.(2012)Huang, Sheer and Bailey-Mcewan}]{huang2012}
@@ -125,7 +125,7 @@
 \bibitem[{Kanaris et~al.(2006)Kanaris, Mouza and Paras}]{kanaris2006}
 \bibinfo{author}{Kanaris, A.G.}, \bibinfo{author}{Mouza, A.A.}, \bibinfo{author}{Paras, S.V.}, \bibinfo{year}{2006}.
 \newblock \bibinfo{title}{Flow and heat prediction in a corrugated plate heat exchanger using a cfd code}.
-\newblock \bibinfo{journal}{Chemical Engineering Technology} \bibinfo{volume}{29}, \bibinfo{pages}{923--930}.
+\newblock \bibinfo{journal}{Chemical Engineering \& Technology} \bibinfo{volume}{29}, \bibinfo{pages}{923--930}.
 %Type = Article
 \bibitem[{Khail and Erisen(2023)}]{khail2023}
 \bibinfo{author}{Khail, A.A.}, \bibinfo{author}{Erisen, A.}, \bibinfo{year}{2023}.
@@ -160,7 +160,7 @@
 \bibitem[{Martin(1996)}]{martin1996}
 \bibinfo{author}{Martin, H.}, \bibinfo{year}{1996}.
 \newblock \bibinfo{title}{A theoretical approach to predict the performance of chevron type plate heat exchangers}.
-\newblock \bibinfo{journal}{Chemical Engineering and Process} \bibinfo{volume}{35}, \bibinfo{pages}{301--310}.
+\newblock \bibinfo{journal}{Chemical Engineering and Processing} \bibinfo{volume}{35}, \bibinfo{pages}{301--310}.
 %Type = Article
 \bibitem[{Menter(1994)}]{menter1994}
 \bibinfo{author}{Menter, F.R.}, \bibinfo{year}{1994}.
@@ -209,7 +209,7 @@
 %Type = Article
 \bibitem[{Petersen et~al.(2012)Petersen, Andersen and Sørensen}]{petersen2012}
 \bibinfo{author}{Petersen, T.G.}, \bibinfo{author}{Andersen, M.M.}, \bibinfo{author}{Sørensen, B.E.}, \bibinfo{year}{2012}.
-\newblock \bibinfo{title}{Numerical simulation of shell- and-tube heat exchangers with helical baffles}.
+\newblock \bibinfo{title}{Numerical simulation of shell-and-tube heat exchangers with helical baffles}.
 \newblock \bibinfo{journal}{International Journal of Thermal Sciences} \bibinfo{volume}{54}, \bibinfo{pages}{173--187}.
 %Type = Article
 \bibitem[{Piper et~al.(2019)Piper, Zibart, Dajakow, Springer, Homberg and Kenig}]{piper2019}
@@ -264,13 +264,13 @@
 %Type = Book
 \bibitem[{Sunden and Manglik(2007)}]{sunden2007}
 \bibinfo{author}{Sunden, B.}, \bibinfo{author}{Manglik, R.M.}, \bibinfo{year}{2007}.
-\newblock \bibinfo{title}{Plate Heat Exchangers; Design, Applications and Performance}.
+\newblock \bibinfo{title}{Plate Heat Exchangers: Design, Applications and Performance}.
 \newblock \bibinfo{publisher}{WIT Press}, \bibinfo{address}{England}.
 %Type = Book
 \bibitem[{Thulukkanam(2013)}]{thulukkanam2013}
 \bibinfo{author}{Thulukkanam, K.}, \bibinfo{year}{2013}.
 \newblock \bibinfo{title}{Heat Exchanger Design Handbook}.
-\newblock \bibinfo{publisher}{Taylor \& Francis Group}, \bibinfo{address}{Baton Rouge, UK}.
+\newblock \bibinfo{publisher}{Taylor \& Francis Group}, \bibinfo{address}{Boca Raton, FL}.
 %Type = Article
 \bibitem[{Torre et~al.(2019)Torre, Montenegro, Onorati, Khadilkar and Icarelli}]{torre2019}
 \bibinfo{author}{Torre, D.}, \bibinfo{author}{Montenegro, G.}, \bibinfo{author}{Onorati, A.}, \bibinfo{author}{Khadilkar, S.}, \bibinfo{author}{Icarelli, R.}, \bibinfo{year}{2019}.
@@ -297,8 +297,8 @@
 \newblock \bibinfo{title}{Study on heat transfer synergy and optimization of capsule-type plate heat exchangers}.
 \newblock \bibinfo{journal}{Processes} \bibinfo{volume}{12}, \bibinfo{pages}{604}.
 %Type = Article
-\bibitem[{Zhang et~al.(2019)Zhang, Zhu, Mondejar and Hanglind}]{zhang2019a}
-\bibinfo{author}{Zhang, J.}, \bibinfo{author}{Zhu, X.}, \bibinfo{author}{Mondejar, M.E.}, \bibinfo{author}{Hanglind, F.}, \bibinfo{year}{2019}.
+\bibitem[{Zhang et~al.(2019)Zhang, Zhu, Mondejar and Haglind}]{zhang2019a}
+\bibinfo{author}{Zhang, J.}, \bibinfo{author}{Zhu, X.}, \bibinfo{author}{Mondejar, M.E.}, \bibinfo{author}{Haglind, F.}, \bibinfo{year}{2019}.
 \newblock \bibinfo{title}{A review of heat transfer enhancement techniques in plate heat exchangers}.
 \newblock \bibinfo{journal}{Renewable and Sustainable Energy Reviews} \bibinfo{volume}{101}, \bibinfo{pages}{305--328}.
 %Type = Article
@@ -308,8 +308,8 @@
 \newblock \bibinfo{journal}{Applied Thermal Engineering} \bibinfo{volume}{108}, \bibinfo{pages}{1237--1242}.
 %Type = Book
 \bibitem[{Zohuri(2017)}]{zohuri2017}
-\bibinfo{author}{Zohuri}, \bibinfo{year}{2017}.
-\newblock \bibinfo{title}{Compact Heat Exchangers: Selection Application, Design and Evaluation}.
+\bibinfo{author}{Zohuri, B.}, \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{Compact Heat Exchangers: Selection, Application, Design and Evaluation}.
 \newblock \bibinfo{publisher}{Springer International Publishing}, \bibinfo{address}{Switzerland}.
 
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.12)  11 MAR 2026 10:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.12)  11 MAR 2026 12:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -542,19 +542,19 @@ File: media/image9.png Graphic file (type png)
 Package pdftex.def Info: media/image9.png  used on input line 276.
 (pdftex.def)             Requested size: 117.00119pt x 82.8518pt.
  [15 <./media/image6.png> <./media/image7.png>] [16 <./media/image8.png> <./media/image9.png>] [17{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [18] [19] [20] [21]
-<media/Picture4.png, id=379, 780.0342pt x 398.9304pt>
+<media/Picture4.png, id=380, 780.0342pt x 398.9304pt>
 File: media/Picture4.png Graphic file (type png)
 <use media/Picture4.png>
 Package pdftex.def Info: media/Picture4.png  used on input line 390.
 (pdftex.def)             Requested size: 272.99881pt x 139.61555pt.
  [22]
-<media/image10_v1.png, id=391, 511.146pt x 258.858pt>
+<media/image10_v1.png, id=392, 511.146pt x 258.858pt>
 File: media/image10_v1.png Graphic file (type png)
 <use media/image10_v1.png>
 Package pdftex.def Info: media/image10_v1.png  used on input line 401.
 (pdftex.def)             Requested size: 272.99881pt x 137.48573pt.
  [23 <./media/Picture4.png>] [24 <./media/image10_v1.png>]
-<media/image50.png, id=412, 192.72pt x 304.0158pt>
+<media/image50.png, id=413, 192.72pt x 304.0158pt>
 File: media/image50.png Graphic file (type png)
 <use media/image50.png>
 Package pdftex.def Info: media/image50.png  used on input line 475.
@@ -563,83 +563,83 @@ Package pdftex.def Info: media/image50.png  used on input line 475.
 Overfull \vbox (42.63051pt too high) detected at line 475
  []
 
-<media/image17.png, id=413, 110.7045pt x 115.9605pt>
+<media/image17.png, id=414, 110.7045pt x 115.9605pt>
 File: media/image17.png Graphic file (type png)
 <use media/image17.png>
 Package pdftex.def Info: media/image17.png  used on input line 475.
 (pdftex.def)             Requested size: 66.29929pt x 69.44765pt.
-<media/image19.png, id=414, 110.7045pt x 115.632pt>
+<media/image19.png, id=415, 110.7045pt x 115.632pt>
 File: media/image19.png Graphic file (type png)
 <use media/image19.png>
 Package pdftex.def Info: media/image19.png  used on input line 475.
 (pdftex.def)             Requested size: 66.29929pt x 69.25093pt.
-<media/image20.png, id=415, 108.7335pt x 113.661pt>
+<media/image20.png, id=416, 108.7335pt x 113.661pt>
 File: media/image20.png Graphic file (type png)
 <use media/image20.png>
 Package pdftex.def Info: media/image20.png  used on input line 475.
 (pdftex.def)             Requested size: 66.29929pt x 69.30708pt.
-<media/image21.png, id=416, 109.062pt x 113.9895pt>
+<media/image21.png, id=417, 109.062pt x 113.9895pt>
 File: media/image21.png Graphic file (type png)
 <use media/image21.png>
 Package pdftex.def Info: media/image21.png  used on input line 475.
 (pdftex.def)             Requested size: 66.29929pt x 69.29868pt.
-<media/image22.png, id=417, 109.062pt x 114.318pt>
+<media/image22.png, id=418, 109.062pt x 114.318pt>
 File: media/image22.png Graphic file (type png)
 <use media/image22.png>
 Package pdftex.def Info: media/image22.png  used on input line 475.
 (pdftex.def)             Requested size: 66.29929pt x 69.49837pt.
-<media/image23.png, id=418, 108.7335pt x 113.661pt>
+<media/image23.png, id=419, 108.7335pt x 113.661pt>
 File: media/image23.png Graphic file (type png)
 <use media/image23.png>
 Package pdftex.def Info: media/image23.png  used on input line 475.
 (pdftex.def)             Requested size: 66.29929pt x 69.30708pt.
-<media/image24.png, id=419, 108.7335pt x 113.661pt>
+<media/image24.png, id=420, 108.7335pt x 113.661pt>
 File: media/image24.png Graphic file (type png)
 <use media/image24.png>
 Package pdftex.def Info: media/image24.png  used on input line 475.
 (pdftex.def)             Requested size: 66.29929pt x 69.30708pt.
-<media/2D_stream_CA_12.png, id=420, 586.44093pt x 487.06969pt>
+<media/2D_stream_CA_12.png, id=421, 586.44093pt x 487.06969pt>
 File: media/2D_stream_CA_12.png Graphic file (type png)
 <use media/2D_stream_CA_12.png>
 Package pdftex.def Info: media/2D_stream_CA_12.png  used on input line 525.
 (pdftex.def)             Requested size: 77.99881pt x 64.77795pt.
-<media/2D_stream_CA_17.png, id=421, 584.1825pt x 484.05844pt>
+<media/2D_stream_CA_17.png, id=422, 584.1825pt x 484.05844pt>
 File: media/2D_stream_CA_17.png Graphic file (type png)
 <use media/2D_stream_CA_17.png>
 Package pdftex.def Info: media/2D_stream_CA_17.png  used on input line 525.
 (pdftex.def)             Requested size: 77.99881pt x 64.6286pt.
-<media/2D_stream_CA_22.png, id=422, 588.69937pt x 486.31688pt>
+<media/2D_stream_CA_22.png, id=423, 588.69937pt x 486.31688pt>
 File: media/2D_stream_CA_22.png Graphic file (type png)
 <use media/2D_stream_CA_22.png>
 Package pdftex.def Info: media/2D_stream_CA_22.png  used on input line 525.
 (pdftex.def)             Requested size: 77.99881pt x 64.43297pt.
-<media/2D_stream_CA_27.png, id=423, 586.44093pt x 483.30562pt>
+<media/2D_stream_CA_27.png, id=424, 586.44093pt x 483.30562pt>
 File: media/2D_stream_CA_27.png Graphic file (type png)
 <use media/2D_stream_CA_27.png>
 Package pdftex.def Info: media/2D_stream_CA_27.png  used on input line 525.
 (pdftex.def)             Requested size: 77.99881pt x 64.27736pt.
-<media/2D_stream_CA_32.png, id=424, 587.94656pt x 485.56406pt>
+<media/2D_stream_CA_32.png, id=425, 587.94656pt x 485.56406pt>
 File: media/2D_stream_CA_32.png Graphic file (type png)
 <use media/2D_stream_CA_32.png>
 Package pdftex.def Info: media/2D_stream_CA_32.png  used on input line 525.
 (pdftex.def)             Requested size: 77.99881pt x 64.41472pt.
-<media/2D_stream_CA_37.png, id=425, 586.44093pt x 485.56406pt>
+<media/2D_stream_CA_37.png, id=426, 586.44093pt x 485.56406pt>
 File: media/2D_stream_CA_37.png Graphic file (type png)
 <use media/2D_stream_CA_37.png>
 Package pdftex.def Info: media/2D_stream_CA_37.png  used on input line 525.
 (pdftex.def)             Requested size: 77.99881pt x 64.57771pt.
-<media/2D_stream_CA_42.png, id=426, 587.94656pt x 485.56406pt>
+<media/2D_stream_CA_42.png, id=427, 587.94656pt x 485.56406pt>
 File: media/2D_stream_CA_42.png Graphic file (type png)
 <use media/2D_stream_CA_42.png>
 Package pdftex.def Info: media/2D_stream_CA_42.png  used on input line 525.
 (pdftex.def)             Requested size: 77.99881pt x 64.41472pt.
-<media/Screenshot_2025-08-01_205019.png, id=427, 365.11406pt x 261.97874pt>
+<media/Screenshot_2025-08-01_205019.png, id=428, 365.11406pt x 261.97874pt>
 File: media/Screenshot_2025-08-01_205019.png Graphic file (type png)
 <use media/Screenshot_2025-08-01_205019.png>
 Package pdftex.def Info: media/Screenshot_2025-08-01_205019.png  used on input line 525.
 (pdftex.def)             Requested size: 77.99881pt x 55.96455pt.
 [25 <./media/image50.png> <./media/image17.png> <./media/image19.png> <./media/image20.png> <./media/image21.png> <./media/image22.png> <./media/image23.png> <./media/image24.png>]
-<media/image40.png, id=446, 100.6962pt x 291.0072pt>
+<media/image40.png, id=447, 100.6962pt x 291.0072pt>
 File: media/image40.png Graphic file (type png)
 <use media/image40.png>
 Package pdftex.def Info: media/image40.png  used on input line 541.
@@ -648,37 +648,37 @@ Package pdftex.def Info: media/image40.png  used on input line 541.
 Overfull \vbox (69.2153pt too high) detected at line 541
  []
 
-<media/image41.png, id=447, 110.7045pt x 115.3035pt>
+<media/image41.png, id=448, 110.7045pt x 115.3035pt>
 File: media/image41.png Graphic file (type png)
 <use media/image41.png>
 Package pdftex.def Info: media/image41.png  used on input line 544.
 (pdftex.def)             Requested size: 66.29929pt x 69.05418pt.
-<media/image43.png, id=448, 110.7045pt x 115.632pt>
+<media/image43.png, id=449, 110.7045pt x 115.632pt>
 File: media/image43.png Graphic file (type png)
 <use media/image43.png>
 Package pdftex.def Info: media/image43.png  used on input line 550.
 (pdftex.def)             Requested size: 66.29929pt x 69.25093pt.
-<media/image44.png, id=449, 108.7335pt x 113.9895pt>
+<media/image44.png, id=450, 108.7335pt x 113.9895pt>
 File: media/image44.png Graphic file (type png)
 <use media/image44.png>
 Package pdftex.def Info: media/image44.png  used on input line 556.
 (pdftex.def)             Requested size: 66.29929pt x 69.50739pt.
-<media/image45.png, id=450, 109.3905pt x 113.661pt>
+<media/image45.png, id=451, 109.3905pt x 113.661pt>
 File: media/image45.png Graphic file (type png)
 <use media/image45.png>
 Package pdftex.def Info: media/image45.png  used on input line 562.
 (pdftex.def)             Requested size: 66.29929pt x 68.89084pt.
-<media/image46.png, id=451, 109.062pt x 113.9895pt>
+<media/image46.png, id=452, 109.062pt x 113.9895pt>
 File: media/image46.png Graphic file (type png)
 <use media/image46.png>
 Package pdftex.def Info: media/image46.png  used on input line 568.
 (pdftex.def)             Requested size: 66.29929pt x 69.29868pt.
-<media/image47.png, id=452, 108.7335pt x 113.9895pt>
+<media/image47.png, id=453, 108.7335pt x 113.9895pt>
 File: media/image47.png Graphic file (type png)
 <use media/image47.png>
 Package pdftex.def Info: media/image47.png  used on input line 574.
 (pdftex.def)             Requested size: 66.29929pt x 69.50739pt.
-<media/image48.png, id=453, 108.405pt x 113.661pt>
+<media/image48.png, id=454, 108.405pt x 113.661pt>
 File: media/image48.png Graphic file (type png)
 <use media/image48.png>
 Package pdftex.def Info: media/image48.png  used on input line 580.
@@ -692,7 +692,7 @@ Package pdftex.def Info: media/image50.png  used on input line 605.
 Overfull \vbox (42.63051pt too high) detected at line 605
  []
 
-<media/image49.png, id=468, 110.7045pt x 119.574pt>
+<media/image49.png, id=469, 110.7045pt x 119.574pt>
 File: media/image49.png Graphic file (type png)
 <use media/image49.png>
 Package pdftex.def Info: media/image49.png  used on input line 608.
@@ -701,63 +701,63 @@ File: media/image21.png Graphic file (type png)
 <use media/image21.png>
 Package pdftex.def Info: media/image21.png  used on input line 614.
 (pdftex.def)             Requested size: 66.29929pt x 69.29868pt.
-<media/image52.png, id=469, 108.0765pt x 115.632pt>
+<media/image52.png, id=470, 108.0765pt x 115.632pt>
 File: media/image52.png Graphic file (type png)
 <use media/image52.png>
 Package pdftex.def Info: media/image52.png  used on input line 620.
 (pdftex.def)             Requested size: 66.29929pt x 70.9377pt.
-<media/image53.png, id=470, 109.062pt x 116.6175pt>
+<media/image53.png, id=471, 109.062pt x 116.6175pt>
 File: media/image53.png Graphic file (type png)
 <use media/image53.png>
 Package pdftex.def Info: media/image53.png  used on input line 626.
 (pdftex.def)             Requested size: 66.29929pt x 70.89632pt.
-<media/image54.png, id=471, 109.062pt x 114.6465pt>
+<media/image54.png, id=472, 109.062pt x 114.6465pt>
 File: media/image54.png Graphic file (type png)
 <use media/image54.png>
 Package pdftex.def Info: media/image54.png  used on input line 632.
 (pdftex.def)             Requested size: 66.29929pt x 69.69809pt.
-<media/image55.png, id=472, 108.7335pt x 113.661pt>
+<media/image55.png, id=473, 108.7335pt x 113.661pt>
 File: media/image55.png Graphic file (type png)
 <use media/image55.png>
 Package pdftex.def Info: media/image55.png  used on input line 638.
 (pdftex.def)             Requested size: 66.29929pt x 69.30708pt.
-<media/image56.png, id=473, 109.062pt x 113.661pt>
+<media/image56.png, id=474, 109.062pt x 113.661pt>
 File: media/image56.png Graphic file (type png)
 <use media/image56.png>
 Package pdftex.def Info: media/image56.png  used on input line 644.
 (pdftex.def)             Requested size: 66.29929pt x 69.09895pt.
 [27 <./media/image40.png> <./media/image41.png> <./media/image43.png> <./media/image44.png> <./media/image45.png> <./media/image46.png> <./media/image47.png> <./media/image48.png>]
-<media/2D_stream_CH_2.png, id=487, 588.69937pt x 476.53032pt>
+<media/2D_stream_CH_2.png, id=488, 588.69937pt x 476.53032pt>
 File: media/2D_stream_CH_2.png Graphic file (type png)
 <use media/2D_stream_CH_2.png>
 Package pdftex.def Info: media/2D_stream_CH_2.png  used on input line 659.
 (pdftex.def)             Requested size: 77.99881pt x 63.13632pt.
-<media/Picture1.png, id=488, 133.24782pt x 96.36pt>
+<media/Picture1.png, id=489, 133.24782pt x 96.36pt>
 File: media/Picture1.png Graphic file (type png)
 <use media/Picture1.png>
 Package pdftex.def Info: media/Picture1.png  used on input line 664.
 (pdftex.def)             Requested size: 81.90262pt x 59.23088pt.
-<media/2D_stream_CH_3.png, id=489, 598.48593pt x 523.9575pt>
+<media/2D_stream_CH_3.png, id=490, 598.48593pt x 523.9575pt>
 File: media/2D_stream_CH_3.png Graphic file (type png)
 <use media/2D_stream_CH_3.png>
 Package pdftex.def Info: media/2D_stream_CH_3.png  used on input line 669.
 (pdftex.def)             Requested size: 77.99881pt x 68.28476pt.
-<media/2D_stream_CH_3_5.png, id=490, 597.73312pt x 542.025pt>
+<media/2D_stream_CH_3_5.png, id=491, 597.73312pt x 542.025pt>
 File: media/2D_stream_CH_3_5.png Graphic file (type png)
 <use media/2D_stream_CH_3_5.png>
 Package pdftex.def Info: media/2D_stream_CH_3_5.png  used on input line 674.
 (pdftex.def)             Requested size: 77.99881pt x 70.7221pt.
-<media/2D_stream_CH_4.png, id=491, 594.72188pt x 565.36218pt>
+<media/2D_stream_CH_4.png, id=492, 594.72188pt x 565.36218pt>
 File: media/2D_stream_CH_4.png Graphic file (type png)
 <use media/2D_stream_CH_4.png>
 Package pdftex.def Info: media/2D_stream_CH_4.png  used on input line 679.
 (pdftex.def)             Requested size: 77.99881pt x 74.14667pt.
-<media/2D_stream_CH_4_5.png, id=492, 590.205pt x 575.90157pt>
+<media/2D_stream_CH_4_5.png, id=493, 590.205pt x 575.90157pt>
 File: media/2D_stream_CH_4_5.png Graphic file (type png)
 <use media/2D_stream_CH_4_5.png>
 Package pdftex.def Info: media/2D_stream_CH_4_5.png  used on input line 684.
 (pdftex.def)             Requested size: 77.99881pt x 76.10008pt.
-<media/2D_stream_CH_5.png, id=493, 612.03656pt x 574.39594pt>
+<media/2D_stream_CH_5.png, id=494, 612.03656pt x 574.39594pt>
 File: media/2D_stream_CH_5.png Graphic file (type png)
 <use media/2D_stream_CH_5.png>
 Package pdftex.def Info: media/2D_stream_CH_5.png  used on input line 689.
@@ -775,37 +775,37 @@ Package pdftex.def Info: media/image40.png  used on input line 712.
 Overfull \vbox (53.58199pt too high) detected at line 712
  []
 
-<media/image69.png, id=517, 152.7525pt x 83.7675pt>
+<media/image69.png, id=518, 152.7525pt x 83.7675pt>
 File: media/image69.png Graphic file (type png)
 <use media/image69.png>
 Package pdftex.def Info: media/image69.png  used on input line 715.
 (pdftex.def)             Requested size: 66.29929pt x 36.35803pt.
-<media/image70.png, id=518, 146.1825pt x 83.7675pt>
+<media/image70.png, id=519, 146.1825pt x 83.7675pt>
 File: media/image70.png Graphic file (type png)
 <use media/image70.png>
 Package pdftex.def Info: media/image70.png  used on input line 720.
 (pdftex.def)             Requested size: 66.29929pt x 37.99155pt.
-<media/image71.png, id=519, 144.54pt x 84.4245pt>
+<media/image71.png, id=520, 144.54pt x 84.4245pt>
 File: media/image71.png Graphic file (type png)
 <use media/image71.png>
 Package pdftex.def Info: media/image71.png  used on input line 725.
 (pdftex.def)             Requested size: 66.29929pt x 38.72493pt.
-<media/image72.png, id=520, 150.1245pt x 93.294pt>
+<media/image72.png, id=521, 150.1245pt x 93.294pt>
 File: media/image72.png Graphic file (type png)
 <use media/image72.png>
 Package pdftex.def Info: media/image72.png  used on input line 730.
 (pdftex.def)             Requested size: 66.29929pt x 41.2018pt.
-<media/image73.png, id=521, 143.226pt x 92.637pt>
+<media/image73.png, id=522, 143.226pt x 92.637pt>
 File: media/image73.png Graphic file (type png)
 <use media/image73.png>
 Package pdftex.def Info: media/image73.png  used on input line 735.
 (pdftex.def)             Requested size: 66.29929pt x 42.8835pt.
-<media/image74.png, id=522, 132.714pt x 90.009pt>
+<media/image74.png, id=523, 132.714pt x 90.009pt>
 File: media/image74.png Graphic file (type png)
 <use media/image74.png>
 Package pdftex.def Info: media/image74.png  used on input line 740.
 (pdftex.def)             Requested size: 66.29929pt x 44.96591pt.
-<media/image75.png, id=523, 125.8155pt x 90.009pt>
+<media/image75.png, id=524, 125.8155pt x 90.009pt>
 File: media/image75.png Graphic file (type png)
 <use media/image75.png>
 Package pdftex.def Info: media/image75.png  used on input line 745.
@@ -823,37 +823,37 @@ Package pdftex.def Info: media/image50.png  used on input line 780.
 Overfull \vbox (42.63051pt too high) detected at line 780
  []
 
-<media/image76.png, id=538, 109.3905pt x 115.3035pt>
+<media/image76.png, id=539, 109.3905pt x 115.3035pt>
 File: media/image76.png Graphic file (type png)
 <use media/image76.png>
 Package pdftex.def Info: media/image76.png  used on input line 783.
 (pdftex.def)             Requested size: 70.19714pt x 73.9963pt.
-<media/image77.png, id=539, 113.004pt x 118.26pt>
+<media/image77.png, id=540, 113.004pt x 118.26pt>
 File: media/image77.png Graphic file (type png)
 <use media/image77.png>
 Package pdftex.def Info: media/image77.png  used on input line 789.
 (pdftex.def)             Requested size: 70.19714pt x 73.46298pt.
-<media/image78.png, id=540, 108.405pt x 113.9895pt>
+<media/image78.png, id=541, 108.405pt x 113.9895pt>
 File: media/image78.png Graphic file (type png)
 <use media/image78.png>
 Package pdftex.def Info: media/image78.png  used on input line 795.
 (pdftex.def)             Requested size: 70.19714pt x 73.81747pt.
-<media/image79.png, id=541, 109.3905pt x 114.6465pt>
+<media/image79.png, id=542, 109.3905pt x 114.6465pt>
 File: media/image79.png Graphic file (type png)
 <use media/image79.png>
 Package pdftex.def Info: media/image79.png  used on input line 801.
 (pdftex.def)             Requested size: 70.19714pt x 73.57468pt.
-<media/image80.png, id=542, 109.062pt x 114.318pt>
+<media/image80.png, id=543, 109.062pt x 114.318pt>
 File: media/image80.png Graphic file (type png)
 <use media/image80.png>
 Package pdftex.def Info: media/image80.png  used on input line 807.
 (pdftex.def)             Requested size: 70.19714pt x 73.58363pt.
-<media/image81.png, id=543, 108.7335pt x 113.9895pt>
+<media/image81.png, id=544, 108.7335pt x 113.9895pt>
 File: media/image81.png Graphic file (type png)
 <use media/image81.png>
 Package pdftex.def Info: media/image81.png  used on input line 813.
 (pdftex.def)             Requested size: 70.19714pt x 73.59483pt.
-<media/image82.png, id=544, 110.376pt x 113.661pt>
+<media/image82.png, id=545, 110.376pt x 113.661pt>
 File: media/image82.png Graphic file (type png)
 <use media/image82.png>
 Package pdftex.def Info: media/image82.png  used on input line 819.
@@ -863,37 +863,37 @@ Overfull \hbox (13.22166pt too wide) in paragraph at lines 774--824
  [][] 
  []
 
-<media/image83.png, id=545, 141.5835pt x 81.1395pt>
+<media/image83.png, id=546, 141.5835pt x 81.1395pt>
 File: media/image83.png Graphic file (type png)
 <use media/image83.png>
 Package pdftex.def Info: media/image83.png  used on input line 834.
 (pdftex.def)             Requested size: 77.99881pt x 44.70113pt.
-<media/image84.png, id=546, 135.342pt x 81.7965pt>
+<media/image84.png, id=547, 135.342pt x 81.7965pt>
 File: media/image84.png Graphic file (type png)
 <use media/image84.png>
 Package pdftex.def Info: media/image84.png  used on input line 839.
 (pdftex.def)             Requested size: 77.99881pt x 47.14119pt.
-<media/image85.png, id=547, 151.4385pt x 99.5355pt>
+<media/image85.png, id=548, 151.4385pt x 99.5355pt>
 File: media/image85.png Graphic file (type png)
 <use media/image85.png>
 Package pdftex.def Info: media/image85.png  used on input line 844.
 (pdftex.def)             Requested size: 77.99881pt x 51.26514pt.
-<media/image86.png, id=548, 137.313pt x 99.5355pt>
+<media/image86.png, id=549, 137.313pt x 99.5355pt>
 File: media/image86.png Graphic file (type png)
 <use media/image86.png>
 Package pdftex.def Info: media/image86.png  used on input line 849.
 (pdftex.def)             Requested size: 77.99881pt x 56.53838pt.
-<media/image87.png, id=549, 119.2455pt x 99.864pt>
+<media/image87.png, id=550, 119.2455pt x 99.864pt>
 File: media/image87.png Graphic file (type png)
 <use media/image87.png>
 Package pdftex.def Info: media/image87.png  used on input line 854.
 (pdftex.def)             Requested size: 77.99881pt x 65.32224pt.
-<media/image88.jpeg, id=550, 89.6805pt x 81.1395pt>
+<media/image88.jpeg, id=551, 89.6805pt x 81.1395pt>
 File: media/image88.jpeg Graphic file (type jpg)
 <use media/image88.jpeg>
 Package pdftex.def Info: media/image88.jpeg  used on input line 859.
 (pdftex.def)             Requested size: 77.99881pt x 70.56972pt.
-<media/image89.jpeg, id=551, 88.038pt x 82.782pt>
+<media/image89.jpeg, id=552, 88.038pt x 82.782pt>
 File: media/image89.jpeg Graphic file (type jpg)
 <use media/image89.jpeg>
 Package pdftex.def Info: media/image89.jpeg  used on input line 864.
@@ -913,37 +913,37 @@ Package pdftex.def Info: media/image40.png  used on input line 885.
 Overfull \vbox (64.86505pt too high) detected at line 885
  []
 
-<media/image90.png, id=565, 134.028pt x 96.9075pt>
+<media/image90.png, id=566, 134.028pt x 96.9075pt>
 File: media/image90.png Graphic file (type png)
 <use media/image90.png>
 Package pdftex.def Info: media/image90.png  used on input line 888.
 (pdftex.def)             Requested size: 77.99881pt x 56.39713pt.
-<media/image91.png, id=566, 135.0135pt x 100.1925pt>
+<media/image91.png, id=567, 135.0135pt x 100.1925pt>
 File: media/image91.png Graphic file (type png)
 <use media/image91.png>
 Package pdftex.def Info: media/image91.png  used on input line 893.
 (pdftex.def)             Requested size: 77.99881pt x 57.88388pt.
-<media/image92.png, id=567, 123.8445pt x 96.2505pt>
+<media/image92.png, id=568, 123.8445pt x 96.2505pt>
 File: media/image92.png Graphic file (type png)
 <use media/image92.png>
 Package pdftex.def Info: media/image92.png  used on input line 898.
 (pdftex.def)             Requested size: 77.99881pt x 60.61903pt.
-<media/image93.png, id=568, 120.231pt x 95.5935pt>
+<media/image93.png, id=569, 120.231pt x 95.5935pt>
 File: media/image93.png Graphic file (type png)
 <use media/image93.png>
 Package pdftex.def Info: media/image93.png  used on input line 903.
 (pdftex.def)             Requested size: 77.99881pt x 62.01688pt.
-<media/image94.png, id=569, 115.632pt x 98.2215pt>
+<media/image94.png, id=570, 115.632pt x 98.2215pt>
 File: media/image94.png Graphic file (type png)
 <use media/image94.png>
 Package pdftex.def Info: media/image94.png  used on input line 908.
 (pdftex.def)             Requested size: 77.99881pt x 66.25766pt.
-<media/image95.png, id=570, 106.7625pt x 95.265pt>
+<media/image95.png, id=571, 106.7625pt x 95.265pt>
 File: media/image95.png Graphic file (type png)
 <use media/image95.png>
 Package pdftex.def Info: media/image95.png  used on input line 913.
 (pdftex.def)             Requested size: 77.99881pt x 69.601pt.
-<media/image96.png, id=571, 102.492pt x 95.922pt>
+<media/image96.png, id=572, 102.492pt x 95.922pt>
 File: media/image96.png Graphic file (type png)
 <use media/image96.png>
 Package pdftex.def Info: media/image96.png  used on input line 918.
@@ -966,62 +966,62 @@ Package pdftex.def Info: media/image50.png  used on input line 948.
 Overfull \vbox (75.192pt too high) detected at line 948
  []
 
-<media/Picture5.png, id=597, 109.938pt x 113.88pt>
+<media/Picture5.png, id=598, 109.938pt x 113.88pt>
 File: media/Picture5.png Graphic file (type png)
 <use media/Picture5.png>
 Package pdftex.def Info: media/Picture5.png  used on input line 951.
 (pdftex.def)             Requested size: 70.19714pt x 72.71265pt.
-<media/image97.png, id=598, 110.7045pt x 116.289pt>
+<media/image97.png, id=599, 110.7045pt x 116.289pt>
 File: media/image97.png Graphic file (type png)
 <use media/image97.png>
 Package pdftex.def Info: media/image97.png  used on input line 957.
 (pdftex.def)             Requested size: 70.19714pt x 73.73799pt.
-<media/image98.png, id=599, 107.748pt x 104.1345pt>
+<media/image98.png, id=600, 107.748pt x 104.1345pt>
 File: media/image98.png Graphic file (type png)
 <use media/image98.png>
 Package pdftex.def Info: media/image98.png  used on input line 963.
 (pdftex.def)             Requested size: 70.19714pt x 67.84552pt.
-<media/image99.png, id=600, 108.7335pt x 115.3035pt>
+<media/image99.png, id=601, 108.7335pt x 115.3035pt>
 File: media/image99.png Graphic file (type png)
 <use media/image99.png>
 Package pdftex.def Info: media/image99.png  used on input line 969.
 (pdftex.def)             Requested size: 70.19714pt x 74.44319pt.
-<media/image100.png, id=601, 109.062pt x 115.9605pt>
+<media/image100.png, id=602, 109.062pt x 115.9605pt>
 File: media/image100.png Graphic file (type png)
 <use media/image100.png>
 Package pdftex.def Info: media/image100.png  used on input line 975.
 (pdftex.def)             Requested size: 70.19714pt x 74.64087pt.
-<media/image101.png, id=602, 108.7335pt x 116.289pt>
+<media/image101.png, id=603, 108.7335pt x 116.289pt>
 File: media/image101.png Graphic file (type png)
 <use media/image101.png>
 Package pdftex.def Info: media/image101.png  used on input line 981.
 (pdftex.def)             Requested size: 70.19714pt x 75.07945pt.
-<media/image102.png, id=603, 117.2745pt x 100.1925pt>
+<media/image102.png, id=604, 117.2745pt x 100.1925pt>
 File: media/image102.png Graphic file (type png)
 <use media/image102.png>
 Package pdftex.def Info: media/image102.png  used on input line 996.
 (pdftex.def)             Requested size: 77.99881pt x 66.63786pt.
-<media/image103.png, id=604, 128.4435pt x 99.5355pt>
+<media/image103.png, id=605, 128.4435pt x 99.5355pt>
 File: media/image103.png Graphic file (type png)
 <use media/image103.png>
 Package pdftex.def Info: media/image103.png  used on input line 1001.
 (pdftex.def)             Requested size: 87.75238pt x 68.00522pt.
-<media/image104.png, id=605, 129.7575pt x 99.5355pt>
+<media/image104.png, id=606, 129.7575pt x 99.5355pt>
 File: media/image104.png Graphic file (type png)
 <use media/image104.png>
 Package pdftex.def Info: media/image104.png  used on input line 1006.
 (pdftex.def)             Requested size: 87.75238pt x 67.3172pt.
-<media/image105.png, id=606, 134.685pt x 99.207pt>
+<media/image105.png, id=607, 134.685pt x 99.207pt>
 File: media/image105.png Graphic file (type png)
 <use media/image105.png>
 Package pdftex.def Info: media/image105.png  used on input line 1011.
 (pdftex.def)             Requested size: 87.75238pt x 64.63817pt.
-<media/image106.png, id=607, 136.9845pt x 99.5355pt>
+<media/image106.png, id=608, 136.9845pt x 99.5355pt>
 File: media/image106.png Graphic file (type png)
 <use media/image106.png>
 Package pdftex.def Info: media/image106.png  used on input line 1016.
 (pdftex.def)             Requested size: 87.75238pt x 63.76476pt.
-<media/image107.png, id=608, 141.255pt x 99.5355pt>
+<media/image107.png, id=609, 141.255pt x 99.5355pt>
 File: media/image107.png Graphic file (type png)
 <use media/image107.png>
 Package pdftex.def Info: media/image107.png  used on input line 1021.
@@ -1035,67 +1035,67 @@ Package pdftex.def Info: media/image40.png  used on input line 1040.
 Overfull \vbox (64.86505pt too high) detected at line 1040
  []
 
-<media/image108.png, id=621, 115.632pt x 99.7326pt>
+<media/image108.png, id=622, 115.632pt x 99.7326pt>
 File: media/image108.png Graphic file (type png)
 <use media/image108.png>
 Package pdftex.def Info: media/image108.png  used on input line 1043.
 (pdftex.def)             Requested size: 70.19714pt x 60.54764pt.
-<media/image109.png, id=622, 119.2455pt x 95.5935pt>
+<media/image109.png, id=623, 119.2455pt x 95.5935pt>
 File: media/image109.png Graphic file (type png)
 <use media/image109.png>
 Package pdftex.def Info: media/image109.png  used on input line 1048.
 (pdftex.def)             Requested size: 70.19714pt x 56.27423pt.
-<media/image110.png, id=623, 128.4435pt x 99.5355pt>
+<media/image110.png, id=624, 128.4435pt x 99.5355pt>
 File: media/image110.png Graphic file (type png)
 <use media/image110.png>
 Package pdftex.def Info: media/image110.png  used on input line 1053.
 (pdftex.def)             Requested size: 70.19714pt x 54.39992pt.
-<media/image111.png, id=624, 138.2985pt x 99.5355pt>
+<media/image111.png, id=625, 138.2985pt x 99.5355pt>
 File: media/image111.png Graphic file (type png)
 <use media/image111.png>
 Package pdftex.def Info: media/image111.png  used on input line 1058.
 (pdftex.def)             Requested size: 70.19714pt x 50.52094pt.
-<media/image112.png, id=625, 139.941pt x 99.5355pt>
+<media/image112.png, id=626, 139.941pt x 99.5355pt>
 File: media/image112.png Graphic file (type png)
 <use media/image112.png>
 Package pdftex.def Info: media/image112.png  used on input line 1063.
 (pdftex.def)             Requested size: 70.19714pt x 49.9286pt.
-<media/image113.png, id=626, 142.569pt x 100.1925pt>
+<media/image113.png, id=627, 142.569pt x 100.1925pt>
 File: media/image113.png Graphic file (type png)
 <use media/image113.png>
 Package pdftex.def Info: media/image113.png  used on input line 1068.
 (pdftex.def)             Requested size: 70.19714pt x 49.33324pt.
 [33 <./media/image102.png> <./media/image103.png> <./media/image104.png> <./media/image105.png> <./media/image106.png> <./media/image107.png>] [34 <./media/image108.png> <./media/image109.png> <./media/image110.png> <./media/image111.png> <./media/image112.png> <./media/image113.png>]
-<media/image114_v1.png, id=655, 512.46pt x 256.449pt>
+<media/image114_v1.png, id=656, 512.46pt x 256.449pt>
 File: media/image114_v1.png Graphic file (type png)
 <use media/image114_v1.png>
 Package pdftex.def Info: media/image114_v1.png  used on input line 1093.
 (pdftex.def)             Requested size: 272.99881pt x 137.17656pt.
  [35 <./media/image114_v1.png>]
-<media/image115_v3.png, id=668, 727.518pt x 368.577pt>
+<media/image115_v3.png, id=669, 727.518pt x 368.577pt>
 File: media/image115_v3.png Graphic file (type png)
 <use media/image115_v3.png>
 Package pdftex.def Info: media/image115_v3.png  used on input line 1109.
 (pdftex.def)             Requested size: 272.99881pt x 137.00139pt.
  [36 <./media/image115_v3.png>]
-<media/image116_v2.png, id=681, 2896.8225pt x 1440.38126pt>
+<media/image116_v2.png, id=682, 2896.8225pt x 1440.38126pt>
 File: media/image116_v2.png Graphic file (type png)
 <use media/image116_v2.png>
 Package pdftex.def Info: media/image116_v2.png  used on input line 1125.
 (pdftex.def)             Requested size: 272.99881pt x 135.36026pt.
-<media/image117_v2.png, id=685, 2890.8pt x 1445.4pt>
+<media/image117_v2.png, id=686, 2890.8pt x 1445.4pt>
 File: media/image117_v2.png Graphic file (type png)
 <use media/image117_v2.png>
 Package pdftex.def Info: media/image117_v2.png  used on input line 1139.
 (pdftex.def)             Requested size: 272.99881pt x 136.30136pt.
  [37 <./media/image116_v2.png>]
-<media/TPF_Vs_RED.png, id=700, 1005.9984pt x 644.04614pt>
+<media/TPF_Vs_RED.png, id=701, 1005.9984pt x 644.04614pt>
 File: media/TPF_Vs_RED.png Graphic file (type png)
 <use media/TPF_Vs_RED.png>
 Package pdftex.def Info: media/TPF_Vs_RED.png  used on input line 1151.
 (pdftex.def)             Requested size: 272.99881pt x 174.77924pt.
  [38 <./media/TPF_Vs_RED.png> <./media/image117_v2.png>]
-<media/TPF_Design_Ranking.png, id=712, 1433.95724pt x 640.91444pt>
+<media/TPF_Design_Ranking.png, id=713, 1433.95724pt x 640.91444pt>
 File: media/TPF_Design_Ranking.png Graphic file (type png)
 <use media/TPF_Design_Ranking.png>
 Package pdftex.def Info: media/TPF_Design_Ranking.png  used on input line 1166.
@@ -1124,18 +1124,18 @@ Package rerunfilecheck Info: File `manuscript_ICHMT.out' has not changed.
 (rerunfilecheck)             Checksum: FB040F9A5D92775924C115F893041195;3460.
  ) 
 Here is how much of TeX's memory you used:
- 15563 strings out of 476106
- 247787 string characters out of 5793933
+ 15561 strings out of 476106
+ 247773 string characters out of 5793933
  1953975 words of memory out of 5000000
  36951 multiletter control sequences out of 15000+600000
- 574504 words of font info for 185 fonts, out of 8000000 for 9000
+ 574455 words of font info for 184 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 72i,17n,79p,1861b,706s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,17n,79p,1955b,706s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on manuscript_ICHMT.pdf (50 pages, 14403623 bytes).
+Output written on manuscript_ICHMT.pdf (50 pages, 14405543 bytes).
 PDF statistics:
- 958 PDF objects out of 1000 (max. 8388607)
- 652 compressed objects within 7 object streams
+ 960 PDF objects out of 1000 (max. 8388607)
+ 654 compressed objects within 7 object streams
  186 named destinations out of 1000 (max. 500000)
  36039 words of extra memory for PDF output out of 42996 (max. 10000000)
 
