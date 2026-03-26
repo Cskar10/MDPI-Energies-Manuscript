@@ -1101,4 +1101,111 @@ File: media/image107.png Graphic file (type png)
 <use media/image107.png>
 Package pdftex.def Info: media/image107.png  used on input line 1055.
 (pdftex.def)             Requested size: 87.75238pt x 61.8359pt.
- [37 <./media/Picture5.png> <./media/image97.png> <./media/image98.png> <./media/image99.png> <./media/image100.png> <./media/image101.png> <./media/image102.png> <./media/image103.png> <./m
+ [37 <./media/Picture5.png> <./media/image97.png> <./media/image98.png> <./media/image99.png> <./media/image100.png> <./media/image101.png> <./media/image102.png> <./media/image103.png> <./media/image104.png> <./media/image105.png> <./media/image106.png> <./media/image107.png>]
+File: media/image40.png Graphic file (type png)
+<use media/image40.png>
+Package pdftex.def Info: media/image40.png  used on input line 1074.
+(pdftex.def)             Requested size: 39.00238pt x 112.71527pt.
+
+Overfull \vbox (64.86505pt too high) detected at line 1074
+ []
+
+<media/image108.png, id=650, 115.632pt x 99.7326pt>
+File: media/image108.png Graphic file (type png)
+<use media/image108.png>
+Package pdftex.def Info: media/image108.png  used on input line 1077.
+(pdftex.def)             Requested size: 70.19714pt x 60.54764pt.
+<media/image109.png, id=651, 119.2455pt x 95.5935pt>
+File: media/image109.png Graphic file (type png)
+<use media/image109.png>
+Package pdftex.def Info: media/image109.png  used on input line 1082.
+(pdftex.def)             Requested size: 70.19714pt x 56.27423pt.
+<media/image110.png, id=652, 128.4435pt x 99.5355pt>
+File: media/image110.png Graphic file (type png)
+<use media/image110.png>
+Package pdftex.def Info: media/image110.png  used on input line 1087.
+(pdftex.def)             Requested size: 70.19714pt x 54.39992pt.
+<media/image111.png, id=653, 138.2985pt x 99.5355pt>
+File: media/image111.png Graphic file (type png)
+<use media/image111.png>
+Package pdftex.def Info: media/image111.png  used on input line 1092.
+(pdftex.def)             Requested size: 70.19714pt x 50.52094pt.
+<media/image112.png, id=654, 139.941pt x 99.5355pt>
+File: media/image112.png Graphic file (type png)
+<use media/image112.png>
+Package pdftex.def Info: media/image112.png  used on input line 1097.
+(pdftex.def)             Requested size: 70.19714pt x 49.9286pt.
+<media/image113.png, id=655, 142.569pt x 100.1925pt>
+File: media/image113.png Graphic file (type png)
+<use media/image113.png>
+Package pdftex.def Info: media/image113.png  used on input line 1102.
+(pdftex.def)             Requested size: 70.19714pt x 49.33324pt.
+[38 <./media/image108.png> <./media/image109.png> <./media/image110.png> <./media/image111.png> <./media/image112.png> <./media/image113.png>] [39]
+<media/image114_v1.png, id=678, 512.46pt x 256.449pt>
+File: media/image114_v1.png Graphic file (type png)
+<use media/image114_v1.png>
+Package pdftex.def Info: media/image114_v1.png  used on input line 1127.
+(pdftex.def)             Requested size: 272.99881pt x 137.17656pt.
+ [40 <./media/image114_v1.png>]
+<media/image115_v3.png, id=690, 727.518pt x 368.577pt>
+File: media/image115_v3.png Graphic file (type png)
+<use media/image115_v3.png>
+Package pdftex.def Info: media/image115_v3.png  used on input line 1143.
+(pdftex.def)             Requested size: 272.99881pt x 137.00139pt.
+ [41 <./media/image115_v3.png>]
+<media/image116_v2.png, id=703, 2896.8225pt x 1440.38126pt>
+File: media/image116_v2.png Graphic file (type png)
+<use media/image116_v2.png>
+Package pdftex.def Info: media/image116_v2.png  used on input line 1159.
+(pdftex.def)             Requested size: 272.99881pt x 135.36026pt.
+ [42 <./media/image116_v2.png>]
+<media/image117_v2.png, id=714, 2890.8pt x 1445.4pt>
+File: media/image117_v2.png Graphic file (type png)
+<use media/image117_v2.png>
+Package pdftex.def Info: media/image117_v2.png  used on input line 1173.
+(pdftex.def)             Requested size: 272.99881pt x 136.30136pt.
+<media/TPF_Vs_RED.png, id=721, 1005.9984pt x 644.04614pt>
+File: media/TPF_Vs_RED.png Graphic file (type png)
+<use media/TPF_Vs_RED.png>
+Package pdftex.def Info: media/TPF_Vs_RED.png  used on input line 1185.
+(pdftex.def)             Requested size: 272.99881pt x 174.77924pt.
+ [43 <./media/image117_v2.png>] [44 <./media/TPF_Vs_RED.png>]
+<media/TPF_Design_Ranking.png, id=739, 1433.95724pt x 640.91444pt>
+File: media/TPF_Design_Ranking.png Graphic file (type png)
+<use media/TPF_Design_Ranking.png>
+Package pdftex.def Info: media/TPF_Design_Ranking.png  used on input line 1200.
+(pdftex.def)             Requested size: 312.00119pt x 139.44666pt.
+ [45] [46 <./media/TPF_Design_Ranking.png>] [47] [48] [49] [50] (./manuscript_ICHMT.bbl [51] [52] [53] [54]
+Underfull \hbox (badness 10000) in paragraph at lines 146--150
+[]$\OT1/lmtt/m/n/12 https : / / www . alfalaval . my / products / heat -[] transfer / plate -[] heat -[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--150
+\OT1/lmtt/m/n/12 exchangers / gasketed -[] plate -[] and -[] frame -[] heat -[] exchangers / heat -[]
+ []
+
+[55] [56] [57] [58]) [59] (./manuscript_ICHMT.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+ ***********
+Package rerunfilecheck Info: File `manuscript_ICHMT.out' has not changed.
+(rerunfilecheck)             Checksum: FB040F9A5D92775924C115F893041195;3460.
+ ) 
+Here is how much of TeX's memory you used:
+ 15746 strings out of 476106
+ 252669 string characters out of 5793933
+ 1953975 words of memory out of 5000000
+ 37141 multiletter control sequences out of 15000+600000
+ 625498 words of font info for 164 fonts, out of 8000000 for 9000
+ 59 hyphenation exceptions out of 8191
+ 72i,17n,79p,1955b,704s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx7.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmri7.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
+Output written on manuscript_ICHMT.pdf (59 pages, 14529294 bytes).
+PDF statistics:
+ 1007 PDF objects out of 1200 (max. 8388607)
+ 691 compressed objects within 7 object streams
+ 195 named destinations out of 1000 (max. 500000)
+ 36551 words of extra memory for PDF output out of 42996 (max. 10000000)
+
