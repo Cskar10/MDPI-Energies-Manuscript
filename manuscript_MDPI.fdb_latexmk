@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex manuscript_MDPI"] 1791801853.41254 "manuscript_MDPI.aux" "manuscript_MDPI.bbl" "manuscript_MDPI" 1791801858.53853 0
+["bibtex manuscript_MDPI"] 1791801853.41254 "manuscript_MDPI.aux" "manuscript_MDPI.bbl" "manuscript_MDPI" 1791803844.97816 0
   "./Definitions/mdpi.bst" 1791761764 23683 4afe8e0b352a18c39ff91c43fd26f4b2 ""
-  "./energies_revision_sources.bib" 1791801853.84697 2015 c95daf9ca50cedf11ef3f6032a5111c4 ""
+  "./energies_revision_sources.bib" 1791803840.17252 2015 c95daf9ca50cedf11ef3f6032a5111c4 ""
   "./references.bib" 1791761754 19333 43d1266b305bdeaa68709ddf927a0ebc ""
-  "manuscript_MDPI.aux" 1791801858.41757 30233 9c8ad142da00d5610d82038c255f42ce "pdflatex"
+  "manuscript_MDPI.aux" 1791803844.8067 30233 9c8ad142da00d5610d82038c255f42ce "pdflatex"
   (generated)
   "manuscript_MDPI.bbl"
   "manuscript_MDPI.blg"
   (rewritten before read)
-["pdflatex"] 1791801853.42558 "/home/cskarakis/Desktop/ICHMT-Manuscript/manuscript_MDPI.tex" "manuscript_MDPI.pdf" "manuscript_MDPI" 1791801858.53872 0
-  "/home/cskarakis/Desktop/ICHMT-Manuscript/manuscript_MDPI.tex" 1791801824.52772 56107 e23fe005eb88e6bd2acaf207bc630933 ""
+["pdflatex"] 1791803839.64919 "/home/cskarakis/Desktop/ICHMT-Manuscript/manuscript_MDPI.tex" "manuscript_MDPI.pdf" "manuscript_MDPI" 1791803844.97833 0
+  "/home/cskarakis/Desktop/ICHMT-Manuscript/manuscript_MDPI.tex" 1791803839.45779 56137 cb1ecc201cb93bd64370a277b303abc5 ""
   "/home/cskarakis/texmf/tex/latex/cleveref/cleveref.sty" 1782901047.50203 329481 7fc6b003158402a4c694bc0a1b729308 ""
   "/home/cskarakis/texmf/tex/latex/enotez/enotez.sty" 1782901014.93282 37436 652a10111432db9d4263e5a9de775c6f ""
   "/home/cskarakis/texmf/tex/latex/frankenstein/attrib.sty" 1782901014.92137 22951 af98a3391c4f1ac745bf17ec57f68e35 ""
@@ -297,7 +297,7 @@
   "du_d3_mesh.png" 1791761754 77375 fe0376a7921c8e1ca3a29d366feb0449 ""
   "du_d3_mesh.tex" 1791761754 371 ceebb3c88c872621b1d0ae0c332ce810 ""
   "du_d3_validation.tex" 1791761754 7184 4249519f1bfcef2a97a61fcd55c34d4b ""
-  "energies_revision_sources.bib" 1791801853.84697 2015 c95daf9ca50cedf11ef3f6032a5111c4 "pdflatex"
+  "energies_revision_sources.bib" 1791803840.17252 2015 c95daf9ca50cedf11ef3f6032a5111c4 "pdflatex"
   "equation_sources.tex" 1791761764 2259 640ffa072a011ad1de59b11a25ad8af3 ""
   "figure10.tex" 1791761764 3056 c62b47d179402efa3449ff81c9bda9b9 ""
   "figure11.tex" 1791761764 3080 bff967b5c6d2f96d73d739f94fc593b5 ""
@@ -334,10 +334,10 @@
   "image_2/Figure9/CH_2mm_TKE.png" 1791761760 24419 98799328e78190c6cc1ac3bf0e456b8a ""
   "image_2/Figure9/CH_3.5mm_TKE.png" 1791761758 14923 87d46600a34958e5fc115303756256f6 ""
   "image_2/Figure9/CH_5mm_TKE.png" 1791761758 15859 c2651eb430ecc4a6feae24642f035a6b ""
-  "manuscript_MDPI.aux" 1791801858.41757 30233 9c8ad142da00d5610d82038c255f42ce "pdflatex"
+  "manuscript_MDPI.aux" 1791803844.8067 30233 9c8ad142da00d5610d82038c255f42ce "pdflatex"
   "manuscript_MDPI.bbl" 1791801853.4222 11791 c07e617778ee36d602f46248fc4a2516 "bibtex manuscript_MDPI"
-  "manuscript_MDPI.out" 1791801858.41857 3315 683dc212a166ca154596c8f62480370d "pdflatex"
-  "manuscript_MDPI.tex" 1791801824.52772 56107 e23fe005eb88e6bd2acaf207bc630933 ""
+  "manuscript_MDPI.out" 1791803844.8087 3315 683dc212a166ca154596c8f62480370d "pdflatex"
+  "manuscript_MDPI.tex" 1791803839.45779 56137 cb1ecc201cb93bd64370a277b303abc5 ""
   "media/BoundaryMap_CA0.png" 1791761760 93922 33551dc98f36fb5130a29effc640e2bc ""
   "media/Figure13_PEC_angle.png" 1791761754 149393 3c43d6f98dec1f726dd2085d3137f7f6 ""
   "media/Figure14_PEC_height.png" 1791761754 167979 48d484c879f0f783087ed03551395c4b ""
