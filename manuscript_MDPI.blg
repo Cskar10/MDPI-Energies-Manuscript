@@ -1,0 +1,47 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: manuscript_MDPI.aux
+The style file: Definitions/mdpi.bst
+Database file #1: references.bib
+Database file #2: energies_revision_sources.bib
+You've used 39 entries,
+            2887 wiz_defined-function locations,
+            799 strings with 11779 characters,
+and the built_in function-call counts, 15909 in all, are:
+= -- 1346
+> -- 1007
+< -- 13
++ -- 446
+- -- 270
+* -- 1432
+:= -- 2455
+add.period$ -- 120
+call.type$ -- 39
+change.case$ -- 40
+chr.to.int$ -- 37
+cite$ -- 39
+duplicate$ -- 712
+empty$ -- 1276
+format.name$ -- 350
+if$ -- 3294
+int.to.chr$ -- 3
+int.to.str$ -- 39
+missing$ -- 38
+newline$ -- 201
+num.names$ -- 117
+pop$ -- 382
+preamble$ -- 0
+purify$ -- 39
+quote$ -- 0
+skip$ -- 406
+stack$ -- 0
+substring$ -- 787
+swap$ -- 149
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 264
+warning$ -- 0
+while$ -- 129
+width$ -- 0
+write$ -- 479
