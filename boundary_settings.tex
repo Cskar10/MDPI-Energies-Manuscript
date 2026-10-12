@@ -1,0 +1,34 @@
+\begingroup
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{@{}p{0.25\textwidth}p{0.71\textwidth}@{}}
+\caption{Boundary conditions, varied parameters and numerical settings recovered from the saved cases. Reporting quantities are distinguished from physical boundary conditions.}
+\label{tab:bc-settings}\\
+\hline
+\textbf{Item} & \textbf{Setting / interpretation}\\
+\hline
+\endfirsthead
+\caption[]{(continued)}\\
+\hline
+\textbf{Item} & \textbf{Setting / interpretation}\\
+\hline
+\endhead
+\hline
+\endfoot
+Solver / formulation & Ansys Fluent 2024 R1 (saved case/data provenance); three-dimensional, double-precision, steady, single-phase, pressure-based RANS.\\
+Physical domain & One liquid-water fluid cell zone between two heated walls. No meshed solid plate or separate exterior-air domain; no conjugate solid conduction is solved.\\
+Fluid properties & Constant $\rho=998.2$~kg/m$^3$, $\mu=0.001003$~Pa\,s, $C_p=4182$~J/(kg\,K), $\lambda=0.6$~W/(m\,K).\\
+Turbulence / energy & SST $k$--$\omega$ model; energy equation enabled.\\
+Inlet (\texttt{inlet}) & Velocity inlet at $x=-L/2$. Mapped outlet Cartesian velocity components, $k$ and $\omega$ are prescribed through the saved scaling expressions in the streamwise quasi-periodic iteration loop; $\mathrm{Re}=4282$ and $u=4282\mu/(\rho D_e)$. Uniform thermal inlet condition $T_{in}=293$~K; the outlet temperature profile is not reapplied.\\
+Outlet (\texttt{outlet}) & Pressure outlet at $x=+L/2$; gauge pressure 0~Pa. \\
+Lower and Upper heated wall & Stationary, no-slip, zero roughness height, fixed $T_w=333$~K. In the $\theta_c = 0^o$ example this is the wetted surface.\\
+Lateral boundaries & Translational periodic pair in the $y$ direction. In the figure~\ref{figure2}(c) example, \texttt{span\_top} is at $y=-12.5$~mm and \texttt{span\_bot} at $y=+12.5$~mm; these are not heated walls.\\
+Cell length / diameter & $L=25$~mm for every case.\\
+Varied parameters & Four seven-case sweeps: $\theta_c,\theta_d=0$--$45\degree$ in $7.5\degree$ steps; $h_c,h_d=2$--$5$~mm in 0.5~mm steps. Fixed companion parameters and the combined dimple case are listed in Table~\ref{tab:geom_cases}.\\
+Pressure--velocity coupling & Coupled pressure-based scheme with automatic global pseudo-time stepping for steady convergence.\\
+Spatial discretization & Second-order pressure; second-order upwind momentum, energy, $k$ and $\omega$.\\
+Configured residual criteria & $10^{-4}$ for continuity, momentum, $k$ and $\omega$; $10^{-6}$ for energy in all 29 labelled entries. \\
+Streamwise quasi-periodic loop & Twenty calculation blocks per model, with outlet-to-inlet profile transfer between blocks (Scheme~\ref{scheme:simulation-workflow}). The block count is not an independent convergence measure.\\
+PEC reporting surfaces / reference & Both heated walls; area-weighted built-in coefficient with case-specific $T_{\mathrm{ref}}=T_{f,ave}$, the mass-weighted volume average of static temperature over the entire fluid domain. For $\theta_c=0\degree$: 296.1537~K. Reporting normalization only; physical boundary temperatures are unchanged.\\
+\end{longtable}
+\endgroup

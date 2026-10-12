@@ -1,0 +1,27 @@
+\begin{figure}[!ht]
+    \centering
+    \begingroup
+    \newlength{\figtwelvepanelwidth}
+    \setlength{\figtwelvepanelwidth}{0.31\textwidth}
+
+    \newcommand{\figtwelvelabel}[2]{%
+        {\sffamily\bfseries\fontsize{8.5}{9.5}\selectfont
+         (#1) $\theta_d=#2\degree$}%
+    }
+
+    \newcommand{\figtwelvepanel}[3]{%
+        \begin{tabular}[t]{@{}c@{}}
+            \includegraphics[width=\figtwelvepanelwidth]{#1}\\[-1pt]
+            \figtwelvelabel{#2}{#3}
+        \end{tabular}%
+    }
+
+    \begin{tabular}[c]{@{}c@{\hspace{0.05in}}c@{\hspace{0.05in}}c@{}}
+        \figtwelvepanel{image_2/Figure16/DA_0deg_2D_stream.png}{a}{0} &
+        \figtwelvepanel{image_2/Figure16/DA_22.5deg_2D_stream.png}{b}{22.5} &
+        \figtwelvepanel{image_2/Figure16/DA_45deg_2D_stream.png}{c}{45}
+    \end{tabular}
+    \endgroup
+    \caption{2D streamlines of DPHE at representative angles of flow ($\theta_d=0\degree$, $22.5\degree$, and $45\degree$).}
+    \label{figure12}
+\end{figure}

@@ -1,0 +1,33 @@
+\paragraph{DPHE mesh-sensitivity assessment.}
+A dedicated assessment was performed for a representative DPHE case using six meshes from 103k to 1622k cells (Table~\ref{tab:dphe_mesh_sensitivity}). The geometry, physical conditions and reporting basis were consistent across the meshes; iterative convergence, mesh consistency, direct velocity and fluid-temperature results, and near-wall resolution were verified before the comparison. Nu was evaluated using both heated walls and the fluid-domain mass-average reference temperature defined in Section~\ref{sec:numerical_methods}. Nu increased with refinement, whereas the Fanning friction factor approached a stable value on the two finest meshes. Refining from 855k to 1622k cells changed Nu and $f_F$ by 2.20\% and 0.095\%, respectively, relative to the finest-mesh values.
+
+\begin{table}[!ht]
+\caption{DPHE mesh-sensitivity results. The three finest meshes are used for the GCI assessment, with indices 1, 2 and 3 denoting fine, medium and coarse grids, respectively.}
+\label{tab:dphe_mesh_sensitivity}
+\centering
+\begin{tabular}{rrrr}
+\toprule
+Cells ($10^3$) & Nu & $f_F$ & GCI grid index \\
+\midrule
+103 & 81.18688 & 0.065464 & --- \\
+175 & 83.35945 & 0.066481 & --- \\
+405 & 85.90751 & 0.068507 & --- \\
+571 & 88.03678 & 0.070067 & 3 (coarse) \\
+855 & 88.58099 & 0.069083 & 2 (medium) \\
+1622 & 90.57817 & 0.069149 & 1 (fine) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Spatial discretization sensitivity in Nu was quantified using the grid convergence index (GCI) formulation of \citet{celik2008gci}. For a three-dimensional mesh, the representative grid spacing is
+\[
+h_g=\left[\frac{1}{N}\sum_{i=1}^{N}\Delta V_i\right]^{1/3}
+=\left(\frac{V}{N}\right)^{1/3},
+\]
+where $V$ is the fluid-domain volume and $N$ is the number of cells; the solution variable is $\phi=\mathrm{Nu}$. For the common domain volume, $r_{21}=h_{g,2}/h_{g,1}=1.238$ and $r_{32}=h_{g,3}/h_{g,2}=1.144$. The unequal-ratio apparent-order calculation gives $p=3.269$. With a safety factor of 1.25,
+\[
+e_a^{21}=\left|\frac{\phi_1-\phi_2}{\phi_1}\right|,
+\qquad
+\mathrm{GCI}_{21}=\frac{1.25e_a^{21}}{r_{21}^{p}-1}\times100\%.
+\]
+The corresponding medium/coarse expressions use $e_a^{32}=|\phi_2-\phi_3|/|\phi_2|$ and $r_{32}$. The resulting values are $\mathrm{GCI}_{21}=2.73\%$ for the 1622k/855k pair and $\mathrm{GCI}_{32}=1.39\%$ for the 855k/571k pair, referenced to the fine and medium grids, respectively. Both refinement ratios are below the recommended value of 1.3, and the two pairs do not establish a consistent asymptotic limit. The GCIs are therefore indicative estimates, not evidence that the medium mesh is more accurate than the fine mesh. The 855k-cell mesh was selected as a practical balance between computational cost and the observed sensitivity of Nu and $f_F$.

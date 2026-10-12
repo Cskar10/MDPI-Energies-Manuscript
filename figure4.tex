@@ -1,0 +1,23 @@
+% Figure 4: merged Nu--f comparisons for the angle and height sweeps.
+% The two source plots remain separate so the panel layout stays editable in LaTeX.
+\begin{figure}[H]
+    \centering
+    \begingroup
+    \newlength{\figfourpanelwidth}
+    \setlength{\figfourpanelwidth}{0.485\linewidth}
+
+    \newcommand{\figfourpanel}[3]{%
+        \begin{tabular}[t]{@{}c@{}}
+            \includegraphics[width=\figfourpanelwidth]{#1}\\[-1pt]
+            {\sffamily\bfseries\fontsize{8.5}{9.5}\selectfont (#2) #3}
+        \end{tabular}%
+    }
+
+    \begin{tabular}[c]{@{}c@{\hspace{0.02\linewidth}}c@{}}
+        \figfourpanel{media/Figure4_angle_comparison.png}{a}{Angle sweeps, $\theta_c$ and $\theta_d$} &
+        \figfourpanel{media/Figure4_height_comparison.png}{b}{Height sweeps, $h_c/l_c$ and $h_d/l_d$}
+    \end{tabular}
+    \endgroup
+    \caption{Fanning friction factor $f_F$ (blue) and two-wall Nusselt number Nu (orange), referenced to each case's fluid-domain mass-average temperature, for the four parametric sweeps: (a) capsule-angle and dimple-angle sweeps and (b) normalized capsule-height and dimple-height sweeps. The combined dimple case is excluded from these one-factor sweeps and is shown separately in Figure~\ref{figure15}.}
+    \label{figure4}
+\end{figure}

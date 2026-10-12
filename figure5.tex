@@ -1,0 +1,66 @@
+% Figure 5: editable LaTeX layout.
+% \figfivepanelwidth is the final size; no outer scaling is applied.
+\begin{figure}[!ht]
+    \centering
+    \begingroup
+    \newlength{\figfivepanelwidth}
+    \newlength{\figfivelegendunit}
+    \setlength{\figfivepanelwidth}{1.55in}
+    \setlength{\figfivelegendunit}{\dimexpr\figfivepanelwidth*10/52\relax}
+
+  
+    \definecolor{figfiveTKE0}{RGB}{4,41,91}
+    \definecolor{figfiveTKE1}{RGB}{27,59,111}
+    \definecolor{figfiveTKE2}{RGB}{64,76,108}
+    \definecolor{figfiveTKE3}{RGB}{89,95,109}
+    \definecolor{figfiveTKE4}{RGB}{111,113,115}
+    \definecolor{figfiveTKE5}{RGB}{134,131,120}
+    \definecolor{figfiveTKE6}{RGB}{159,150,116}
+    \definecolor{figfiveTKE7}{RGB}{184,171,108}
+    \definecolor{figfiveTKE8}{RGB}{212,193,92}
+    \definecolor{figfiveTKE9}{RGB}{239,217,69}
+
+    \newcommand{\figfivelegendbar}{%
+        \begin{tikzpicture}[baseline=0pt,x=1cm,y=\figfivelegendunit]
+            \fill[figfiveTKE0] (0,0.00) rectangle (0.42,0.52);
+            \fill[figfiveTKE1] (0,0.52) rectangle (0.42,1.04);
+            \fill[figfiveTKE2] (0,1.04) rectangle (0.42,1.56);
+            \fill[figfiveTKE3] (0,1.56) rectangle (0.42,2.08);
+            \fill[figfiveTKE4] (0,2.08) rectangle (0.42,2.60);
+            \fill[figfiveTKE5] (0,2.60) rectangle (0.42,3.12);
+            \fill[figfiveTKE6] (0,3.12) rectangle (0.42,3.64);
+            \fill[figfiveTKE7] (0,3.64) rectangle (0.42,4.16);
+            \fill[figfiveTKE8] (0,4.16) rectangle (0.42,4.68);
+            \fill[figfiveTKE9] (0,4.68) rectangle (0.42,5.20);
+            \draw[line width=0.35pt] (0,0) rectangle (0.42,5.20);
+            \foreach \y/\ticklabel in {
+                0.00/0.0,0.52/1.0,1.04/2.0,1.56/3.0,2.08/4.0,
+                2.60/5.0,3.12/6.0,3.64/7.0,4.16/8.0,4.68/9.0,5.20/10.0}
+                {\draw[line width=0.3pt] (0.42,\y) -- (0.49,\y)
+                 node[anchor=west,font=\sffamily\fontsize{7.5}{8}\selectfont]
+                 {\ticklabel};}
+        \end{tikzpicture}%
+    }
+
+    \newcommand{\figfivepanellabel}[2]{%
+        {\sffamily\bfseries\fontsize{8.5}{9.5}\selectfont
+         (#1) $\theta_c=#2^{\circ}$}%
+    }
+
+    \begin{tabular}[c]{@{}l@{\hspace{0.10in}}c@{\hspace{0.05in}}c@{\hspace{0.05in}}c@{}}
+        {\sffamily\bfseries\fontsize{8.5}{9.5}\selectfont
+         \shortstack[l]{Turbulence kinetic\\energy, $k$}} & & & \\[-1pt]
+        \figfivelegendbar &
+        \includegraphics[width=\figfivepanelwidth]{image_2/Figure6/CA_0deg_TKE.png} &
+        \includegraphics[width=\figfivepanelwidth]{image_2/Figure6/CA_22.5deg_TKE.png} &
+        \includegraphics[width=\figfivepanelwidth]{image_2/Figure6/CA_45deg_TKE.png} \\[-1pt]
+        {\sffamily\fontsize{7.5}{8.5}\selectfont
+         \shortstack[l]{$\times 10^{-3}$\\$\mathrm{m^2\,s^{-2}}$}} &
+        \figfivepanellabel{a}{0} &
+        \figfivepanellabel{b}{22.5} &
+        \figfivepanellabel{c}{45}
+    \end{tabular}
+    \endgroup
+    \caption{TKE distribution of the middle $z$-axis section of CPHE at representative capsule angles ($\theta_c=0\degree$, $22.5\degree$, and $45\degree$).}
+    \label{figure5}
+\end{figure}

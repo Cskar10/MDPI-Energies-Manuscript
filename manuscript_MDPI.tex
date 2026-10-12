@@ -1,0 +1,565 @@
+
+\documentclass[energies,article,submit,moreauthors,noheaderline]{Definitions/mdpi}
+
+
+\firstpage{1}
+\makeatletter
+\setcounter{page}{\@firstpage}
+\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2026}
+\copyrightyear{2026}
+\datereceived{ }
+\daterevised{ }
+\dateaccepted{ }
+\datepublished{ }
+
+% Additional packages and local commands used by the converted manuscript.
+\usepackage{adjustbox}
+\usepackage{makecell}
+\usepackage{longtable}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+% Compensate for fancyhdr header height warning.
+\setlength{\headheight}{20.0pt}
+\addtolength{\topmargin}{-8.0pt}
+\makeatletter
+\def\LT@output{%
+  \ifnum\outputpenalty <-\@Mi
+    \ifnum\outputpenalty > -\LT@end@pen
+      \LT@err{floats and marginpars not allowed in a longtable}\@ehc
+    \else
+      \setbox\z@\vbox{\unvbox\@cclv}%
+      \ifdim \ht\LT@lastfoot>\ht\LT@foot
+        \dimen@\pagegoal
+        \advance\dimen@-\ht\LT@lastfoot
+        \ifdim\dimen@<\ht\z@
+          \setbox\@cclv\vbox{\unvbox\z@\copy\LT@foot\vss}%
+          \@makecol
+          \@outputpage
+          \setbox\@cclv\vbox{\box\LT@head}%
+        \fi
+      \fi
+      \global\@colroom\@colht
+      \global\vsize\@colht
+      \vbox
+        {\unvbox\z@\box\LT@foot}%
+    \fi
+  \else
+    \setbox\@cclv\vbox{\unvbox\@cclv\copy\LT@foot\vss}%
+    \@makecol
+    \@outputpage
+    \global\vsize\@colroom
+    \copy\LT@head\nobreak
+  \fi}
+\makeatother
+\newcommand{\degree}{\texorpdfstring{\ensuremath{^\circ}}{\textdegree}}
+
+% Strip math tokens from PDF metadata strings (abstract/title) to avoid
+% hyperref "Token not allowed in a PDF string" warnings.
+\makeatletter
+\AtBeginDocument{%
+  \pdfstringdefDisableCommands{%
+    \def\ensuremath#1{}%
+    \def\textsuperscript#1{#1}%
+    \def\textsubscript#1{#1}%
+    \def\degree{\textdegree}%
+    \def\,{ }%
+    \def\thinspace{ }%
+    \def\quad{ }%
+    \def\geq{>=}%
+    \def\leq{<=}%
+  }%
+}
+\makeatother
+
+\Title{Parametric Thermo-Hydraulic Benchmarking of Capsule and Dimple Plate Heat Exchanger Channels via Periodic Unit-Cell CFD}
+
+\Author{Cheuk Sing Cheung \textsuperscript{1}, Christos Skarakis \textsuperscript{1} , Lance Smith \textsuperscript{2}, Jiyuan Tu \textsuperscript{1}, Abhijit Date \textsuperscript{1}, Kiao Inthavong \textsuperscript{1} and Sara Vahaji \textsuperscript{1}}
+
+\AuthorNames{Cheuk Sing Cheung, Christos Skarakis, Sara Vahaji, Lance Smith and Kiao Inthavong}
+
+% Affiliations / Addresses
+\address{%
+\textsuperscript{1} \quad School of Engineering, RMIT University, Melbourne, VIC 3000, Australia\\
+\textsuperscript{2} \quad InKorr Pty Ltd, Knoxfield, VIC 3180, Australia}
+
+% Contact information of the corresponding author
+\corres{Correspondence: kiao.inthavong@rmit.edu.au}
+
+% Abstract (single paragraph)
+\abstract{Direct comparisons between capsule- and dimple-embossed plate heat exchanger channels are limited by differences in operating conditions and metric definitions across published studies. This study addresses that comparison gap through a side-by-side assessment under a common steady-state, single-phase water-flow Reynolds-averaged Navier--Stokes framework, unit-cell approach, thermal boundary conditions and reporting definitions at Re = 4282. Four seven-case sweeps vary capsule angle, capsule height, dimple height and dimple flow-entry angle; one additional case combines the largest tested dimple height and angle. The unit cells use lateral periodic boundaries and a streamwise quasi-periodic iteration loop for velocity and turbulence profiles, while inlet temperature remains prescribed. The performance evaluation criterion (PEC) combines the two-wall Nusselt number with the Fanning friction factor to quantify the heat-transfer--flow-resistance trade-off. The heat-transfer coefficient uses both walls' total heat rate and area, referenced to each case's fluid-domain mass-average static temperature. Relative embossing depth (RED) is height divided by the case-specific hydraulic diameter. Constructed PEC ranges are 254.6--273.0 for capsule angle, 254.8--294.6 for capsule height, 234.0--285.2 for dimple angle and 214.8--251.0 for dimple height. The combined dimple case gives PEC = 305.14, compared with 294.64 for the 5 mm capsule case. Their 3.56\% separation is not an uncertainty-resolved performance advantage. These are comparative outcomes within the tested parameter ranges and unit-cell heating conditions.}
+
+% Keywords
+\keyword{Computational Fluid Dynamics; plate heat exchangers; capsule-type Plate Heat Exchanger; dimple-type Plate Heat Exchanger; heat transfer; performance evaluation criterion}
+
+\input{equation_sources.tex}
+
+\begin{document}
+
+% Center body pages for local review without editing the MDPI class file.
+\newgeometry{left=2.5cm,right=2.5cm,top=2.0cm,bottom=2.0cm,includehead,includefoot}
+\fancyheadoffset[L]{0pt}
+\fancyfootoffset[L]{0pt}
+
+\begin{table}[H]
+\caption{Nomenclature}
+\centering
+\scriptsize
+\renewcommand{\arraystretch}{1.05}
+\begin{tabularx}{\textwidth}{@{}l>{\raggedright\arraybackslash}X@{\quad}l>{\raggedright\arraybackslash}X@{}}
+\hline
+\textbf{Symbol} & \textbf{Description} & \textbf{Symbol} & \textbf{Description} \\
+\hline
+$A$         & Cross-sectional flow area (mm$^2$) & Nu          & Nusselt number (--) \\
+$A_0$       & Adopted inlet flow area (mm$^2$) & $P$ & Wetted perimeter (mm) \\
+$C$         & Unit-cell centre & PEC & Performance evaluation criterion (--) \\
+$C_p$       & Specific heat capacity (J/kg$\cdot$K) & Pr          & Prandtl number (--) \\
+$D$         & Dimple diameter (mm) & $Q_f$, $Q_j$ & Fluid energy gain; wall-$j$ heat rate (W) \\
+$D_e$       & Hydraulic diameter (mm) & Re          & Reynolds number (--) \\
+$f$, $f_F$  & Fanning friction factor (--) & $\mathrm{Re}_x$ & Local Reynolds number (--) \\
+$h$         & Embossing height (mm) & RED         & Relative Embossing Depth (--) \\
+$h_{ave}$ & Two-wall, fluid-temperature-referenced heat-transfer coefficient (W/m$^2\cdot$K) & $S$         & Total heated wall area, $S_1+S_2$ (mm$^2$) \\
+$h_c$       & Capsule height (mm) & $T_{f,ave}$ & Fluid-domain mass-average temperature (K) \\
+$h_d$       & Dimple height (mm) & $T_{f,in}$ & Fluid inlet temperature (K) \\
+$k$         & Turbulence kinetic energy (m$^2$/s$^2$) & $T_{f,out}$ & Fluid outlet temperature (K) \\
+$l$         & Capsule length (mm)  & $T_w$       & Wall temperature (K) \\
+$l_c$       & Capsule unit-cell length (mm) & $u$         & Prescribed reference mean speed (m/s) \\
+$l_d$, $L$  & Dimple/common unit-cell length (mm) & $w$         & Capsule width (mm) \\
+$\dot{m}$         & Mass flow rate (kg/s) & $x$         & Streamwise distance (m) \\
+$T_{\mathrm{ref}}$ & Coefficient reporting temperature (K) & $y^+$       & Dimensionless wall distance (--) \\
+\hline
+\multicolumn{2}{l}{\textbf{Greek symbols}} & \multicolumn{2}{l}{\textbf{Abbreviations}} \\
+\hline
+$\delta$    & Boundary-layer thickness (m) & CFD   & Computational fluid dynamics \\
+$\Delta p$  & Pressure drop (Pa) & CPHE  & Capsule-type plate heat exchanger \\
+$\Delta\mathrm{PEC}$ & Difference between matched CPHE and DPHE PEC values (--) & & \\
+$\epsilon$  & Turbulence dissipation rate (m$^2$/s$^3$) & DPHE  & Dimple-type plate heat exchanger \\
+$\theta_c$  & Capsule angle (\degree) & HVAC  & Heating, ventilation, and air-conditioning \\
+$\theta_d$  & Dimple angle (\degree) & PHE   & Plate heat exchanger \\
+$\lambda$   & Thermal conductivity (W/m$\cdot$K) & RANS  & Reynolds-averaged Navier--Stokes \\
+$\rho$      & Fluid density (kg/m$^3$) & SST   & Shear Stress Transport \\
+$\upsilon$  & Kinematic viscosity (m$^2$/s) & STHE  & Shell-and-tube heat exchanger \\
+$\omega$    & Specific dissipation rate (s$^{-1}$) & TKE   & Turbulence kinetic energy \\          
+\hline
+\end{tabularx}
+\end{table}
+
+
+\section{Introduction}
+\label{sec:introduction} 
+
+
+Plate heat exchangers (PHEs) place a large heat-transfer area within a compact volume and are widely used in power generation, process industries, heating and cooling systems, and refrigeration. Alternating embossed plates form narrow passages that repeatedly disturb the thermal and hydrodynamic boundary layers. This disturbance can strengthen convection and reduce the area required for a specified thermal duty, but the associated separation, recirculation, and wall shear also increase pressure loss and pumping demand. Heat transfer and hydraulic resistance are therefore coupled design objectives: an embossing should not be judged by Nusselt number alone if its thermal gain is obtained at a disproportionate friction penalty \citep{abukhader2012, thulukkanam2013, zhang2019a}. Although chevron plates remain the conventional reference, capsule, dimple, and pillow surfaces provide alternative ways to control the flow path and surface-area distribution.
+
+The capsule studies summarized in Table~\ref{tab:embossing-summary} demonstrate that performance depends on more than the presence of an embossing. \citet{hamedi2024} reported that a symmetric convex--concave capsule arrangement increased Nusselt number by 28--55\% relative to a simple channel, but also increased the friction factor by 35--44\%. Capsule aspect ratio and size further shift this balance: a larger length-to-width ratio can improve energy efficiency, whereas smaller capsules intensify heat transfer and pressure loss \citep{jiang2019a, jiang2020}. Symmetric arrangements have outperformed zig-zag layouts, and capsule surfaces have also produced higher Nusselt numbers with lower friction factors than chevron surfaces under the conditions examined by \citet{zhang2016}. Geometry optimization produced an 8.3\% increase in heat-transfer coefficient together with a 14.3\% reduction in friction \citep{yu2024}, while adding secondary dimples to capsule surfaces increased heat transfer by 19--46\% \citep{shao2024}. Collectively, these results show that capsule orientation, size, aspect ratio, and arrangement can reorganize the thermal--hydraulic trade-off; they do not identify one configuration that remains superior under a different geometry or operating basis.
+
+The dimple and pillow literature shows the same sensitivity to geometry. Pillow plates have required 30\% less heat-transfer area than chevron plates while producing a lower pressure drop \citep{arsenyeva2019}, and a dimpled pillow channel achieved an 11.2\% thermo-hydraulic improvement with an 8.7\% pressure-loss reduction \citep{piper2019}. For standalone dimple surfaces, \citet{soman2022} reported a 39\% Nusselt-number increase relative to a flat PHE, while hemispherical dimples produced a heat-transfer coefficient approximately 27.2\% higher than rhombus dimples \citep{ying2021}. Numerical predictions have also been compared with experiments for several dimple channels, including deviations of $-11\%$ to 1.8\% in one study series \citep{mocnik2020, mocnik2023, mocnik2024}. Other investigations considered supercritical CO$_2$, nanofluids, lubricating oil, two-phase flow, or hybrid capsule--dimple plates \citep{jing2019, li2019, soman2019, torre2019, shao2024}. These results confirm that dimple shape, channel configuration, and working fluid all influence the balance between heat transfer and pressure loss.
+
+Table~\ref{tab:embossing-summary} thus provides strong evidence for both embossing families, but it also exposes the comparison gap. The reported studies use different fluids, Reynolds-number ranges, channel domains, boundary conditions, hydraulic-diameter definitions, turbulence models, reference surfaces, and performance measures. Some investigate single-phase water, whereas others consider nanofluids, supercritical fluids, or multiphase flow; some report Nusselt number and friction factor separately, whereas others use a combined thermo-hydraulic index. Consequently, the published percentage improvements cannot be ranked on a common scale. Most studies also vary parameters within one surface family, leaving it unclear whether the performance of CPHE and DPHE channels responds similarly when angle and height are changed over comparable ranges.
+
+A controlled computational fluid dynamics (CFD) study is suitable for resolving this gap because it provides both integral performance measures and spatial evidence of the mechanisms that produce them. Nusselt number and pressure loss quantify the overall thermal and hydraulic response, while turbulence kinetic energy, streamlines, and temperature fields reveal how an embossing redirects flow, forms wakes, and transports heat from the wall to the channel core. Periodic unit cells have been used successfully for repeating capsule and dimple geometries because they retain the local embossing-induced mechanisms while avoiding the cost of modelling an entire exchanger \citep{hamedi2024, jiang2019a, jiang2020, piper2019, shao2024}. Published comparisons with experiments also support the use of steady RANS modelling for this class of channel \citep{mocnik2020, mocnik2023, mocnik2024}. The SST $k$--$\omega$ model is selected because its near-wall treatment and response to adverse pressure gradients are suited to the separated flows produced by embossed passages \citep{kanaris2006, menter1994}.
+
+The present study therefore benchmarks capsule-type plate heat exchanger (CPHE) and dimple-type plate heat exchanger (DPHE) channels within one steady-state, single-phase water-flow RANS framework at $\mathrm{Re}=4282$. Both geometries use a periodic unit cell, common thermal and hydraulic boundary conditions, and the same hydraulic-diameter definition, so the effects of geometry are not obscured by a change in the numerical basis. Twenty-eight one-factor cases comprise four seven-case sweeps. Capsule and dimple angles cover $0\degree$--$45\degree$ in $7.5\degree$ increments, while capsule and dimple heights cover 2.0--5.0~mm in 0.5~mm increments; the remaining geometric variables are held at the reference values listed in Table~\ref{tab:geom_cases}. This design separates the effects of capsule angle ($\theta_c$), capsule height ($h_c$), dimple height ($h_d$), and dimple flow-entry angle ($\theta_d$). One additional case combines $\theta_d=45\degree$ with $h_d=5.0$~mm to test a targeted dimple interaction identified from the one-factor results, rather than treating the four sweeps as a full factorial optimization.
+
+The study has three objectives: to quantify how the four geometric variables change Nusselt number and the friction factor; to explain those changes using the computed flow and temperature fields; and to compare CPHE and DPHE cases through the performance evaluation criterion (PEC) and relative embossing depth (RED). PEC expresses the heat-transfer--friction trade-off on a common scale, while RED relates embossing height to the effective channel size. This common framework permits a direct benchmark that the heterogeneous literature cannot provide. The finite sweeps and single combined case nevertheless support conclusions only for the tested geometry, fluid, Reynolds number, and boundary conditions; they do not establish a global optimum across untested parameter interactions.
+
+{\footnotesize
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{0pt}
+\begin{longtable}{@{}>{\raggedright}p{2.6cm} >{\raggedright}p{1.6cm} >{\raggedright}p{1.6cm} >{\raggedright\arraybackslash}p{8.9cm}@{}}
+\caption{Summary of embossing surface enhancement of PHEs}
+\label{tab:embossing-summary} \\
+\hline
+\textbf{Author} & \textbf{Surface} & \textbf{Method\textsuperscript{a}} & \textbf{Key Findings} \\
+\hline
+\endfirsthead
+\caption[]{(continued)} \\
+\hline
+\textbf{Author} & \textbf{Surface} & \textbf{Method\textsuperscript{a}} & \textbf{Key Findings} \\
+\hline
+\endhead
+\hline
+\endfoot
+\citet{hamedi2024} & Capsule & E \& N & Proposed a symmetrical arrangement of convex and concave capsule surfaces. Relative to a simple channel, the friction factor increased by 35--44\% and the Nusselt number by 28--55\%. \\
+\citet{jiang2019a} & Capsule & N & Found that the capsule length-to-width ratio controls the performance trade-off: a larger ratio improves energy efficiency, while a smaller ratio increases heat transfer and pressure drop. \\
+\citet{jiang2020} & Capsule & N & A symmetrical capsule arrangement outperformed a zig-zag arrangement. Smaller capsules increased heat transfer, while larger capsules reduced pressure loss. \\
+\citet{jiang2019} & Capsule & E & Found that plate-corrugation geometry had little effect on liquid and gas distribution during two-phase channel flow. \\
+\citet{zhang2016} & Capsule & E \& N & Capsule embossing produced a higher Nusselt number and lower friction factor than chevron surfaces. \\
+\citet{yu2024} & Capsule & N & Combined CFD with backpropagation optimization, increasing the heat-transfer coefficient by 8.3\% and reducing friction by 14.3\%. \\
+\citet{shao2024} & Capsule / Dimple & N & Adding secondary dimples to capsule surfaces increased heat transfer by 19--46\%. \\
+\citet{arsenyeva2019} & Pillow & E \& N & Required 30\% less heat-transfer area than chevron plates and produced a lower pressure drop. \\
+\citet{shirzad2019a} & Pillow & N & Greater channel height was most efficient at low Reynolds numbers, while wider transverse welding-spot spacing was most efficient at high Reynolds numbers. \\
+\citet{shirzad2019b} & Pillow & N & Predicted higher thermal performance with a nanofluid than with water. \\
+\citet{kumar2019} & Pillow & N & Numerically examined heat transfer and fluid flow in a pillow-plate channel. \\
+\citet{piper2019} & Pillow / Dimple & N & Reported an 11.2\% improvement in thermo-hydraulic performance and an 8.7\% reduction in pressure loss. \\
+\citet{jing2019} & Dimple & N & Numerically examined supercritical CO$_2$ flow and heat transfer in rectangular channels with teardrop dimples. \\
+\citet{li2019} & Dimple & E & Found that smaller air bubbles produced greater heat transfer than medium or large bubbles during two-phase flow. \\
+\citet{mocnik2020} & Dimple & E \& N & Compared turbulence models with experimental data and identified two flow regimes. \\
+\citet{mocnik2023} & Dimple & E \& N & Reported numerical results from $-$11\% to 1.8\% relative to the experiments. \\
+\citet{mocnik2024} & Dimple & E \& N & Found good agreement between numerical and experimental results for low-Reynolds-number flow in a dimple-type PHE. \\
+\citet{soman2019} & Dimple & E & Nanofluids improved heat transfer relative to water without increasing the friction factor. \\
+\citet{soman2022} & Dimple & N & A dimple PHE increased the Nusselt number by 39\% relative to a flat PHE. \\
+\citet{torre2019} & Dimple & E \& N & Obtained satisfactory agreement between experiments and simulations for pressure drop and heat transfer with lubricating oil. \\
+\citet{wang2019} & Dimple & N & A dimpled surface reduced pressure drop by 20.57\% and increased net power generation by 173.6\%. \\
+\citet{ying2021} & Dimple & E \& N & Hemispherical dimple channels produced a heat-transfer coefficient about 27.2\% higher than rhombus dimple channels. \\
+\hline
+\multicolumn{4}{l}{\textsuperscript{a}E -- Experimental; N -- Numerical}
+\end{longtable}
+}
+
+\section{Methodology}
+\label{sec:methodology}
+
+This numerical investigation applies a common computational fluid dynamics (CFD) framework to benchmark the thermo-hydraulic performance of CPHE and DPHE channels. The method combines periodic unit-cell representation, mesh-independence testing, literature-supported turbulence modelling, and controlled parametric sweeps \citep{jiang2019, mocnik2020}. The calculation sequence is case selection and geometric-domain construction, mesh generation with near-wall prism layers, physical-model and boundary-condition assignment, steady solution through the streamwise quasi-periodic iteration loop, and consistent reduction of the saved fields to thermal and hydraulic metrics. Section~\ref{sec:periodic_boundary} and Scheme~\ref{scheme:simulation-workflow} distinguish the solver iterations within each period from the outlet-to-inlet profile-transfer loop between periods.
+
+\subsection{Numerical methods}
+\label{sec:numerical_methods}
+
+The Reynolds-averaged Navier--Stokes (RANS) approach is widely used in numerical studies of capsule and dimple channels. Published models include realizable $k$--$\epsilon$ \citep{kumar2019, jing2019, mocnik2020, mocnik2024}, shear stress transport (SST) $k$--$\omega$ \citep{hamedi2024, jiang2019a, jiang2020, mocnik2020, mocnik2024, torre2019}, Reynolds stress \citep{shao2024, mocnik2023}, elliptic-blending $k$--$\epsilon$ \citep{arsenyeva2019, piper2019}, and standard $k$--$\epsilon$ \citep{soman2022}. The SST $k$--$\omega$ model is used here because it combines near-wall $k$--$\omega$ treatment with a $k$--$\epsilon$ formulation away from the wall and is suited to separated flows with adverse pressure gradients \citep{kanaris2006, khail2023, menter1994}.
+
+All simulations use steady-state, single-phase water flow at subcritical pressure and temperature.
+
+\input{numerical_definitions.tex}
+
+\subsection{Geometry}
+\label{sec:geometry}
+
+Two embossed channel families are considered: capsule and dimple. Both use alternating convex and concave features to disturb the flow, but their planform geometry differs.
+
+The periodic surface is represented by its smallest repeating unit cell. This commonly used approach reduces the computational domain while retaining the flow, thermal, and turbulence mechanisms generated by the repeating embossments \citep{hamedi2024,jiang2019,jiang2020, kumar2019, piper2019, shao2024, zhang2016}.
+
+The local cross-sectional wall profile is generated using the cosine function
+\begin{equation}
+  y(x)=\frac{h}{2}\left[1+\cos\left(\frac{2\pi x}{D}\right)\right],
+  \qquad -\frac{D}{2}<x<\frac{D}{2}.
+  \label{eq:cosine_wall_profile}
+\end{equation}
+Here, $h$ is the profile height and $D$ is the full span of the local profile (the diameter for a dimple). The coordinate $x$ is measured from the profile centre, and $y(x)$ is the displacement from the local reference plane. The profile reaches $y(0)=h$ at its centre and approaches zero at either edge. These are local profile coordinates, distinct from the global CFD coordinate directions.
+
+\begin{figure}[!ht]
+\centering
+\begin{tabular}{cccc}
+\includegraphics[width=0.3\textwidth]{media/image6_v2.png} &
+\includegraphics[width=0.3\textwidth]{media/image9_v2.png} &
+\includegraphics[width=0.2\textwidth]{media/image7_v2.png} &
+\includegraphics[width=0.2\textwidth]{media/image7.5_v2.png} \\
+\end{tabular}
+\caption{Unit Cell Dimensions}
+\label{figure1}
+\end{figure}
+
+\begin{figure}[!ht]
+  \centering
+  \begin{tabular}{@{}cc@{}}
+    \includegraphics[width=0.48\textwidth]{media/image5_v3.png} &
+    \includegraphics[width=0.48\textwidth]{media/image8_v4.png}\\
+  \end{tabular}
+  \par\smallskip
+  \input{boundary_panel.tex}
+  \caption{Schematics and unit cells for (a) a capsule-type plate heat exchanger (CPHE) and (b) a dimple-type plate heat exchanger (DPHE); blue and green labels in these panels denote concave and convex embossings. (c) Boundary map from the $\theta_c$ 0\degree mesh. Blue and orange identify the lower and upper heated walls; water occupies the gap. The green inlet and purple outlet are distinguished from the lateral periodic pair. Colours identify regions, not temperature. The model contains no solid plate volume or separate exterior-air region.}
+  \label{figure2}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Dimensions of the initial geometry}
+\label{tab:dim-initial}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{lcccccc}
+\hline
+\textbf{Type} & $l$ (mm) & $w$ or $D$ (mm) & $l_c$ or $l_d$ (mm) & $h_c$ or $h_d$(mm) & $\theta_c$ or $\theta_d$ (deg) \\
+\hline
+CPHE & 20 & 10 & 25 & 2 & 0\degree \\
+\hline
+DPHE &  & 10 & 25 & 2 & 0\degree \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{CPHE}
+\label{sec:cphe_geometry}
+
+Figure~\ref{figure2} shows the CPHE channel formed between two capsule-embossed plates. Consecutive plates are inverted and rotated, so alternating concave and convex embossings form the spiral-like pattern of two concave and two convex capsules shown in Figure~\ref{figure1}. The geometric parameters are capsule length ($l$), width ($w$), height ($h_c$), unit-cell length ($l_c$), angle ($\theta_c$), and centre $C$, defined by the intersection of perpendicular lines through the capsule midpoints. The angle $\theta_c$ is measured anticlockwise from the mainstream flow direction to the capsule major axis; at $0\degree$, they are aligned. Higher angles rotate the capsule CAD anticlockwise while the flow-entry direction remains fixed normal to the inlet, with $l$, $w$, $h_c$, and $l_c$ unchanged. Table~\ref{tab:dim-initial} lists the initial dimensions.
+
+\subsubsection{DPHE}
+\label{sec:dphe_geometry}
+
+Figure~\ref{figure2} shows the DPHE channel and unit cell formed by plates with opposing dimple embossings. The same unit-cell approach is used, with dimple height ($h_d$), diameter ($D$), and unit-cell length ($l_d$) as the main dimensions. Because each dimple is circular, the CAD geometry remains fixed during the angle sweep. The flow-entry angle $\theta_d$ is measured from the fixed line joining adjacent dimple centres to the mainstream flow direction (Figure~\ref{figure1}) and is varied by changing the direction from which flow enters the unchanged dimple array. Table~\ref{tab:dim-initial} lists the initial dimensions.
+
+\subsubsection{Boundary conditions and computational workflow}
+\label{sec:periodic_boundary}
+
+The lateral faces form a translational periodic pair. In the streamwise direction, an external \emph{quasi-periodic iteration loop} transfers the outlet Cartesian velocity components, turbulent kinetic energy $k$ and specific dissipation rate $\omega$ to the inlet for the next period; the inlet and outlet are not a built-in periodic boundary pair. One period comprises the steady solver iterations between successive profile transfers. The inlet temperature remains 293~K and no outlet temperature profile is imposed at the inlet. Both no-slip walls are held at 333~K. The pressure outlet has zero gauge pressure; its 293.7~K total-temperature setting applies only to fluid entering through that boundary during local backflow.
+
+With constant fluid properties and no buoyancy coupling, the momentum and turbulence solution is independent of temperature. The streamwise loop therefore targets a repeatable hydrodynamic state, but neither the block count nor a stable heat-transfer integral establishes thermal periodicity. The thermal results are interpreted as unit-cell heating with quasi-periodic hydrodynamic profile transfer, not as a demonstrated thermally fully developed periodic solution. The workflow below describes the calculation structure.
+
+Figure~\ref{figure2}(c) locates the boundaries on an example computational domain, and Table~\ref{tab:bc-settings} summarizes the recovered settings. The two walls are opposing wetted surfaces of one water passage, not the inner and outer faces of a meshed solid plate. The coefficient reporting reference is assigned as $T_{\mathrm{ref}}=T_{f,ave}$ for each saved solution, as defined in Equation~\eqref{eq:h_ave} and its accompanying fluid-domain mass-average temperature definition; it is not an additional imposed fluid boundary temperature.
+
+\input{simulation_workflow.tex}
+
+\input{boundary_settings.tex}
+
+\subsubsection{Geometric parameters}
+\label{sec:geometric_parameters}
+
+A one-factor-at-a-time analysis is used to isolate the effects of capsule angle, capsule height, dimple height, and dimple flow-entry angle. Table~\ref{tab:geom_cases} summarizes the four seven-case sweeps, the fixed variables in each sweep, and the targeted combined dimple case. The tested ranges follow prior studies and commercially available products \citep{hamedi2024, jiang2019, jiang2019a, jiang2020, soman2019, mocnik2024, jing2019, Alfalaval2022}. The common physical models and case-specific residual targets are listed in Table~\ref{tab:bc-settings}. The recorded thermo-fluid outputs include Nu, $f$, $\Delta p$, and turbulence kinetic energy fields.
+
+After the one-factor sweeps, one interaction case combines $\theta_d=45\degree$ with $h_d=5.0$~mm. It is reported separately from the two seven-case dimple sweeps. The same physical models, discretization choices and post-processing definitions are applied across the parameter matrix; the case-specific hydraulic diameter and reference speed are recalculated rather than imposing one common velocity. The four sweeps and combined case give 29 case labels but 27 distinct saved solutions, because two reference solutions are shared between sweeps. The combined case is an angle--height combination within the dimple family, not a capsule--dimple hybrid surface or a full factorial search.
+
+\subsubsection{Performance evaluation criteria}
+\label{sec:performance_criteria}
+
+The following performance metrics are used to compare the results:
+
+\begin{itemize}
+  \item \textbf{Nusselt Number} (Nu): Measures convective heat transfer relative to conduction across the fluid layer. Higher Nu indicates stronger convective heat transfer.
+
+  \item \textbf{Friction Factor} ($f$): Measures flow resistance from the simulated pressure loss, as defined by Equation~\eqref{eq:f}.
+
+  \item \textbf{Performance Evaluation Criterion} (PEC): Combines heat transfer and flow resistance to rank all 29 cases on a common scale:
+  \begin{equation}
+  \mathrm{PEC} = \frac{\mathrm{Nu}}{f_F^{1/3}}
+  \label{eq:PEC}
+  \end{equation}
+  Thermal--hydraulic assessment combines heat-transfer and pressure-loss measures \citep{thulukkanam2013,hamedi2024,jiang2019,jiang2020}. Equation~\eqref{eq:PEC} defines the \emph{unnormalized} index adopted in this study: higher values indicate a higher two-wall, fluid-temperature-referenced Nu relative to the cube root of $f_F$ on the same comparison basis. It is not a baseline-normalized enhancement factor or, by itself, proof of superior exchanger performance at equal pumping power. Its use here requires the same coefficient, temperature-reference convention and friction convention for every plotted case.
+  Sections~\ref{sec:disc_capsule_angle}--\ref{sec:disc_dimple_angle} analyze trends in Nu and $f$ individually; section~\ref{sec:tgg_comparison} uses PEC to rank all cases and compare both embossing families.
+\end{itemize}
+
+The comparison identifies heat-transfer and flow-resistance trade-offs among the examined cases. Because each primary sweep changes one geometric variable while the others remain fixed and only one targeted combined case is included, the results do not establish a global optimum across interacting variables or untested conditions.
+
+\paragraph{Relative Embossing Depth (RED)}
+Embossing depth constrains plate spacing and channel size. Relative Embossing Depth (RED) is introduced to compare the protrusion height with the effective channel scale:
+\begin{equation}
+\text{RED} = \frac{h}{D_e}
+\label{eq:red}
+\end{equation}
+where $h$ is the embossing height ($h_c$ or $h_d$) and $D_e$ is given by Equation~\eqref{eq:De}, with both lengths expressed in the same units. RED is a dimensionless descriptor defined for the present comparison, not an externally fitted correlation. It varies with height and, for the capsule-angle cases, with the measured mesh-dependent $D_e$. All dimple-angle cases share the same geometry and RED. Thus RED alone does not identify a unique geometric or flow-entry-angle case, even within the dimple-angle family.
+
+\begin{table}[H]
+\centering
+\caption{Geometric parameter cases for CPHE and DPHE}
+\label{tab:geom_cases}
+\footnotesize
+\renewcommand{\arraystretch}{1}
+\begin{tabularx}{\textwidth}{ll>{\raggedright\arraybackslash}l>{\raggedright\arraybackslash}X}
+\hline
+\textbf{Heat Exchanger Type} & \textbf{Parameter} & \textbf{Cases} & \textbf{Description} \\ \hline
+\multirow{2}{*}{CPHE (Capsule-Type)} 
+& Capsule Angle ($\theta_c$) & 0\degree\ to 45\degree & Orientation of capsule pattern relative to main flow direction with 7.5\degree\ increments and a capsule height of 2.5~mm. \\
+& Capsule Height ($h_c$) & 2--5~mm & Height of capsule embossing feature with 0.5~mm increments and a capsule angle of 22.5\degree. \\ \hline
+\multirow{3}{*}{DPHE (Dimple-Type)} 
+& Dimple Height ($h_d$) & 2--5~mm & Height of the dimple embossing feature with 0.5~mm increments and a dimple angle of 0\degree. \\
+& Dimple Angle ($\theta_d$) & 0\degree\ to 45\degree & Angle between the main flow direction and the dimple pattern, varied in 7.5\degree\ increments with a dimple height of 3.5~mm. \\
+& Combined Dimple Case & $\theta_d=45\degree$, $h_d=5.0$~mm & Targeted interaction case combining the highest-PEC dimple orientation with the maximum tested dimple height. \\ \hline
+\end{tabularx}
+\end{table}
+
+\subsection{Mesh independence}
+\label{sec:mesh}
+
+An unstructured poly-hexacore mesh type is adopted for the mesh generation. With guidance from literature, certain criteria are set for the mesh generated to minimize discretizations and interpolation error \citep{sorgente2023, juretic2010}, including mesh orthogonality and mesh skewness. For this study, the criteria of minimum mesh orthogonality of 0.1 and maximum mesh skewness of 0.8 are set for all cases. Representative CPHE and DPHE meshes are shown in Figure~\ref{figure3}(a,b).
+
+To accurately predict the wall heat transfer coefficient and the wall shear stress close to the wall, prism layers are included in the mesh generation. Prism layers are hexahedral cells that are normal to the wall boundary to capture the steep normal gradient in the mean velocity and temperature inside the thermal and hydraulic boundary layers. The total prism layer thickness should capture the turbulent boundary layer of the flow. The initial estimation of the total boundary layer thickness $\delta$ can be estimated through the following equation: $\delta/x = 0.16/\text{Re}_x^{1/7}$ \citep{cengel2014}, where $x$ is the total stream length, which is $l_c$ and $l_d$ for this study, and Re is the Reynolds number.
+
+For the prism layers to accurately predict the near-wall behavior, the first prism layer thickness (or the first layer height) plays an important role in calculating the behavior at the viscous sub-layer, as it is related to $y^+$, which is a dimensionless distance normal to the wall, and the near-wall kinematic viscosity can be calculated accordingly.  o minimize the numerical uncertainty, $y^+$ <1 should be applied for the SST $k$--$\omega$ turbulence model \cite{eca2018}; the first layer height is set to 0.0002~mm, with 7 boundary layers and transition ratio as 0.5, the resultant $y^+$ is 0.087 (Figure~\ref{figure3}(a)).
+
+A mesh-sensitivity study was performed for CPHE with $h = 2.5$~mm, as shown in Figure~\ref{figure3}(c). $f$ and Nu for five different meshes ranging from $\sim$100k to $\sim$1.1M elements are compared to determine the best coarsest mesh. The difference of $f$ and Nu between the results of $\sim$800k mesh count and $\sim$1.1M mesh count is less than 2.7\% and 2\%, respectively, on the original reporting basis; the $\sim$800k mesh was subsequently used. The historical Nu values in Figure~\ref{figure3}(c) have not been recalculated using the fluid-domain mass-average temperature, because the corresponding fields for all five mesh levels are unavailable in the present reconstruction. The quoted Nu difference therefore does not verify mesh independence of the revised thermal reporting definition.
+
+\begin{figure}[!ht]
+  \centering
+  \begin{minipage}[b]{0.60\textwidth}
+    \centering
+    \includegraphics[width=\linewidth,height=4.8cm,keepaspectratio]{media/Picture4.png}\par
+    \smallskip
+    {\small (a) CPHE mesh and near-wall detail}
+  \end{minipage}\hfill
+  \begin{minipage}[b]{0.33\textwidth}
+    \centering
+    \includegraphics[width=\linewidth,height=4.8cm,keepaspectratio]{media/Figure3_DPHE_mesh.png}\par
+    \smallskip
+    {\small (b) DPHE mesh}
+  \end{minipage}
+  \par\medskip
+  \begin{minipage}{0.66\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{media/image10_v1.png}\par
+    \smallskip
+    {\small (c) CPHE mesh-sensitivity results}
+  \end{minipage}
+  \caption{Representative (a) CPHE and (b) DPHE meshes, and (c) CPHE mesh-sensitivity results.}
+  \label{figure3}
+\end{figure}
+
+\input{dphe_mesh_independence.tex}
+
+\input{du_d3_validation.tex}
+
+\section{Results and Discussion}
+\label{sec:results}
+\label{sec:discussion}
+
+The numerical simulations conducted in this study provide detailed insight into the thermo-hydraulic behavior of capsule-type and dimple-type plate heat exchangers under a variety of geometric configurations. By examining the influence of selected design parameters namely the capsule angle and height in CPHE, and the dimple height and angle of flow in DPHE the impact on flow structures, pressure drop, and heat transfer performance is assessed. Key fluid dynamic behaviors, including vortex generation, turbulence intensity, and recirculating flow patterns, are visualized through turbulence kinetic energy contours and streamline plots. Temperature distributions further reveal the relationship between geometric enhancements and thermal mixing. These findings enable the identification of design trends that balance improved heat transfer effectiveness with manageable pressure penalties, supporting the development of more efficient compact heat exchanger designs. Figure~\ref{figure4} provides an overview of the four parametric sweeps by comparing the friction factor and Nusselt number for capsule angle, capsule height, dimple height, and dimple angle. The following subsections relate these performance trends to the corresponding flow and temperature fields.
+
+\input{figure4.tex}
+
+\subsection{CPHE parametric study}
+\label{sec:cphe_results}
+
+The CPHE study varies capsule angle and height. All four sweeps use the same constructed values as the PEC analysis: Nu is based on both heated walls and the case-specific fluid-domain mass-average temperature, and $f_F$ is the Fanning friction factor. Re\,=\,4282 is maintained using the case-specific $D_e$ and a common cell length of 25~mm. The steady-state flow fields support interpretation of these trends; TKE alone does not quantify wall heat transfer.
+
+\subsubsection{Capsule angle}
+\label{sec:disc_capsule_angle}
+
+For the capsule-angle sweep in Table~\ref{tab:geom_cases}, Figures~\ref{figure5} and~\ref{figure6} show mid-plane TKE and streamlines at $\theta_c=0\degree$, $22.5\degree$, and $45\degree$; Figure~\ref{figure4}(a) compares all seven angles.
+
+At $0\degree$, high-TKE bands flank an aligned central wake. At $22.5\degree$, the wake becomes asymmetric and the deflected through-flow interacts with compact recirculation cells. At $45\degree$, broader outer shear regions accompany larger separated and reattaching regions. The main effect of rotation is therefore to redistribute wake interactions and secondary flow, rather than increase TKE uniformly across the passage.
+
+\input{figure5.tex}
+
+\input{figure6.tex}
+
+The response in Figure~\ref{figure4}(a) is nonlinear. Both Nu and $f_F$ reach their largest sampled values at $22.5\degree$ (79.80 and 0.03072), respectively 15.1\% and 87.5\% above the $0\degree$ case. Larger angles do not further increase Nu, despite the more extensive secondary flow. Because $D_e$ varies with angle, the Nu ranking need not match that of the dimensional heat-transfer coefficient or total heat release.
+
+\subsubsection{Capsule height}
+\label{sec:disc_capsule_height}
+
+The capsule-height sweep covers $h_c=2$--$5$~mm ($h_c/l_c=0.08$--$0.20$) at $\theta_c=22.5\degree$. Figures~\ref{figure7} and~\ref{figure8} compare TKE and temperature fields at height ratios of 0.08, 0.14, and 0.20.
+
+\input{figure7.tex}
+
+As capsule height increases, the broad outer high-TKE lanes in Figure~\ref{figure7} weaken, and the strongest activity becomes concentrated near the central wake. This localization contrasts with a uniform increase in turbulence throughout the channel.
+
+\input{figure8.tex}
+
+The warmer-fluid regions in Figure~\ref{figure8} shift from the convex-capsule wake towards the concave cavities as height increases, while the channel core remains comparatively cool.
+
+Figure~\ref{figure4}(b) shows an overall but nonlinear increase in Nu with capsule height. The 5~mm capsule gives the highest tested Nu (91.83), whereas the friction factor peaks at 2.5~mm ($f_F=0.03072$). Across the 2--5~mm endpoints, Nu increases by 30.0\% and $f_F$ by 42.3\%.
+
+These normalized trends differ from the dimensional response: as $D_e$ grows and the prescribed speed falls at fixed Re, the mean heat-transfer coefficient, total wall heat rate, and pressure drop all decrease between the endpoints. Higher Nu therefore does not imply greater heat duty in this height sweep.
+
+\subsection{DPHE parametric study}
+\label{sec:dphe_results}
+
+The DPHE study varies dimple height and the angle of flow relative to the dimple array.
+
+\subsubsection{Dimple height}
+\label{sec:disc_dimple_height}
+
+The dimple-height sweep covers $h_d=2$--$5$~mm ($h_d/l_d=0.08$--$0.20$) at $\theta_d=0\degree$. Figures~\ref{figure9} and~\ref{figure10} compare mid-plane TKE and three-dimensional temperature fields at height ratios of 0.08, 0.14, and 0.20.
+
+\input{figure9.tex}
+
+Increasing dimple height localizes the high-TKE regions near the dimple rims and outer boundaries, leaving more of the central passage at low-to-intermediate TKE (Figure~\ref{figure9}). The strongest wake interactions become less spatially extensive rather than producing a section-wide rise in turbulence.
+
+\input{figure10.tex}
+
+In Figure~\ref{figure10}, the warmed-fluid plume extends farther across the passage as dimple height increases. This shows how heating is redistributed between the opposing surfaces, not an increase in the wall-integrated heat rate.
+
+Unlike the capsule-height sweep, both Nu and $f_F$ increase monotonically with dimple height (Figure~\ref{figure4}(b)). Across 2--5~mm, Nu increases by 62.7\% to 104.09, while $f_F$ increases by 169.7\% to 0.07133. The relative rise in friction is therefore substantially larger than that in Nu. As in the capsule-height sweep, however, increasing $D_e$ and decreasing speed at fixed Re accompany lower dimensional heat-transfer coefficients, total wall heat rates, and pressure drops between the endpoints.
+
+\subsubsection{Dimple angle}
+\label{sec:disc_dimple_angle}
+
+Although each circular dimple is axisymmetric, changing the flow direction relative to the array alters the interaction between neighbouring convex and concave wakes \citep{jiang2019a, hamedi2024}. Figure~\ref{figure11} compares TKE at $\theta_d=0\degree$, $22.5\degree$, and $45\degree$. The nearly symmetric low-TKE corridor at $0\degree$ becomes an oblique wake bordered by a concentrated high-TKE band at $22.5\degree$. At $45\degree$, a coherent diagonal corridor forms, with high TKE more localized near the dimples.
+
+\input{figure11.tex}
+
+\input{figure12.tex}
+
+The streamlines in Figure~\ref{figure12} show compact, locally confined recirculation at $0\degree$, larger structures interacting with the oblique through-flow at $22.5\degree$, and a more coherent diagonal passage at $45\degree$. The latter bypasses much of the stronger wake interaction, consistent with reduced resistance and heat transfer.
+
+Figure~\ref{figure4}(a) shows a non-monotonic response: Nu peaks at $30\degree$ (106.37), while $f_F$ peaks at $22.5\degree$ (0.06503). The 2.6\% Nu difference between these angles does not establish a resolved optimum without quantified numerical uncertainty. Both measures decline beyond $30\degree$, reaching their lowest values at $45\degree$: Nu is 9.6\% and $f_F$ is 59.2\% below the $0\degree$ values. Because $D_e$ and the reference speed remain fixed in this sweep, these trends also track the mean heat-transfer coefficient and pressure drop.
+
+\subsection{Cross-parameter thermo-geometric comparison}
+\label{sec:tgg_comparison}
+
+Figures~\ref{figure13} and~\ref{figure14} compare the constructed PEC values for the angle and normalized-height sweeps. All three PEC plots, including Figure~\ref{figure15}, use the same two-wall coefficient and case-specific fluid-domain mass-average reference convention, together with the prescribed-Reynolds-number velocity defined in Section~\ref{sec:numerical_methods}. The 29 case labels contain 27 distinct saved solutions because two sweep reference points are shared. The dimple-angle sweep reaches its highest PEC at $\theta_d=45\degree$ (285.19). The targeted combined case therefore pairs this angle with $h_d=5.0$~mm instead of the angle sweep's fixed height of 3.5~mm.
+
+\noindent\input{figure13.tex}\hfill\input{figure14.tex}
+\par\vspace{\baselineskip}
+
+To quantify the paired separation in Figures~\ref{figure13} and~\ref{figure14}, the matched-case PEC difference is defined as
+\begin{equation}
+  \Delta\mathrm{PEC}=\mathrm{PEC}_{\mathrm{CPHE}}-\mathrm{PEC}_{\mathrm{DPHE}},
+  \label{eq:delta-pec}
+\end{equation}
+where positive values indicate a higher CPHE score on the stated reporting basis. Equation~\eqref{eq:delta-pec} is a paired-difference definition introduced here. Ordinary least-squares regression \citep{nistLinearRegression} of the seven matched numerical angles gives
+\begin{equation}
+  \Delta\mathrm{PEC}_{\theta}=33.695-1.42984\left(\frac{\theta}{1\degree}\right),
+  \qquad 0\degree\leq\theta\leq45\degree,
+  \label{eq:delta-pec-angle}
+\end{equation}
+with $R^2=0.973$ and $\mathrm{RMSE}=\sqrt{\sum_{i=1}^{7}e_i^2/7}=3.54$, where $e_i$ is the fitted residual. The actual endpoint differences are 39.04 at $0\degree$ and $-30.61$ at $45\degree$; the paired differences decrease across the seven sampled angles. The fitted coefficients are results of the present reconstruction; the cited source supplies the regression method, not these coefficients.
+
+For the seven matched normalized heights, $h_c/l_c=h_d/l_d=0.08$--$0.20$, $\Delta\mathrm{PEC}_h$ remains positive but scattered. Its mean is 42.01, sample standard deviation 7.77 and range 30.36--53.94. A linear height fit has only $R^2=0.087$, so the height result is reported as a descriptive offset. The angle fit is an empirical summary of seven paired cases, not an independently validated predictive correlation; neither its $R^2$ nor its RMSE quantifies CFD uncertainty.
+
+These results are limited to the present one-factor sweeps at $\mathrm{Re}=4282$: the angle comparison pairs the CPHE cases at $h_c=2.5$~mm with the DPHE cases at $h_d=3.5$~mm, and the height comparison pairs the CPHE cases at $\theta_c=22.5\degree$ with the DPHE cases at $\theta_d=0\degree$. They do not describe angle--height interactions and should not be extrapolated to other Reynolds numbers, unit-cell geometries, fluids, or boundary conditions.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[
+    width=0.9\linewidth,
+    keepaspectratio,
+    interpolate=true
+  ]{media/PEC_Vs_RED.png}
+  \caption{Performance evaluation criterion (PEC\,=\,Nu/$f_F^{1/3}$) versus relative embossing depth (\texorpdfstring{RED\,=\,$h/D_e$}{RED = h/De}). The star denotes $\theta_d=45\degree$, $h_d=5.0$~mm. All scores use both heated walls and case-specific $T_{\mathrm{ref}}=T_{f,ave}$, the fluid-domain mass-average temperature. These are constructed unit-cell scores, not thermally fully developed coefficients or uncertainty-resolved rankings.}
+  \label{figure15}
+\end{figure}
+
+
+Figures~\ref{figure13}--\ref{figure15} use a single saved-field postprocessing basis: $D_e=4A_0L/(S_1+S_2)$, $U=4282\mu/(\rho D_e)$, and $h_{ave}=(Q_1+Q_2)/[(S_1+S_2)(T_w-T_{f,ave})]$ with $T_{\mathrm{ref}}=T_{f,ave}$ evaluated as the mass-weighted volume average of static temperature over the entire fluid domain of each case. Thus both walls enter the heat-transfer coefficient as well as the hydraulic-diameter definition. The prescribed reference velocity is corroborated by the finite embedded inlet profiles, including the combined case; its non-finite saved inlet velocity-component arrays are not used in this reconstruction. No wall heat rate, flow field or physical boundary condition has been changed.
+
+The constructed two-wall PEC ranges are 254.6--273.0 for capsule angle, 254.8--294.6 for capsule height, 214.8--251.0 for dimple height, and 234.0--285.2 for dimple angle. The combined dimple case gives RED\,=\,0.357856, Nu\,=\,87.38, $f_F=0.023480$, and PEC\,=\,305.14. It has the highest constructed score, followed by the $h_c=5.0$~mm capsule case at PEC\,=\,294.64. Their separation is 3.56\%; without quantified numerical uncertainty, this is not interpreted as a resolved superiority or a global optimum. Height sweeps span different RED values, and the measured capsule-angle hydraulic diameter also changes. All dimple-angle cases share the same geometry and RED, so RED alone cannot identify the flow-entry angle. These scores characterize the saved, thermally developing unit-cell heating problem with periodic hydrodynamics; they do not establish thermally fully developed periodic heat transfer.
+
+\subsection{Limitations of this study}
+\label{sec:limitations}
+
+Exploring the intricacies of heat exchanger designs through numerical investigations can be incredibly enlightening, yet it is important to remember these methods are not without their flaws. Recognizing these limitations helps us better understand the results and spot areas that need more research and real-world testing.
+
+For instance, our study assumes that the working fluid does not compress, making the calculations simpler. However, this assumption does not hold up for all real-world scenarios, especially when dealing with gases or other compressible fluids. Additionally, our simulations only consider single-phase flow, meaning they do not take into account the complexities that come with multiphase flows like liquid-gas, or solid-liquid. These interactions can drastically change heat transfer and pressure drops. Moreover, the boundary conditions we apply in simulations tend to be idealized. They do not always reflect the varied and sometimes chaotic conditions found in real-life operations, such as changing inlet temperatures or pressures, and leakage or local geometry variations. We also assume that the physical properties of the working fluid, like density, viscosity, and thermal conductivity, remain constant. In reality, these properties can change significantly with temperature and pressure, which affects both flow and heat transfer.
+
+Section~\ref{sec:du-validation} reports two quasi-periodic Nusselt numbers with a provisional comparison table targeting the D3 projected-area (PA) data of Du et al. The differences of $-6.56\%$ and $-6.32\%$ are arithmetic against the supplied digitisation, whose coordinates were not fully reproduced by an independent reading of the original plot. Reference-data reconciliation, four further study points, the numerical-verification record, and consistency of area, temperature, property and diameter definitions remain incomplete. The table therefore does not establish experimental validation of the full parametric study or an uncertainty-qualified accuracy bound.
+
+
+\section{Conclusions}
+\label{sec:conclusion}
+
+The central contribution of this study is a direct, side-by-side comparison of capsule-type (CPHE) and dimple-type (DPHE) channels under a common numerical and operating baseline. It addresses the comparison gap left by separate studies with differing conditions and reporting definitions. Both surface families were assessed using the same steady-state, single-phase water-flow RANS framework, unit-cell approach, thermal boundary conditions and performance definitions at $\mathrm{Re}=4282$. Four seven-case, one-factor sweeps examined capsule angle ($\theta_c$), capsule height ($h_c$), dimple height ($h_d$), and dimple flow-entry angle ($\theta_d$), with one targeted combined dimple case. The comparative contribution lies in quantifying the geometry-dependent thermal--hydraulic trade-offs across both surface families using established Nu, Fanning friction and PEC measures, supported by the computed flow and temperature fields.
+
+Across the 2--5~mm height endpoints, capsule Nu and $f_F$ increase by 30.0\% and 42.3\%, respectively, compared with 62.7\% and 169.7\% for dimples. These paired changes quantify the different normalized heat-transfer--resistance responses of the two height sweeps. They are not increases in absolute heat duty or pressure drop, because the hydraulic diameter and reference speed also vary at fixed Re.
+
+On the common two-wall, case-specific fluid-domain mass-average reference basis, capsule-angle PEC spans 254.6--273.0, while capsule-height PEC spans 254.8--294.6. The dimple-angle and dimple-height ranges are 234.0--285.2 and 214.8--251.0, respectively. The highest capsule-height score occurs at $h_c=5.0$~mm. These differences apply to the prescribed reference-speed, hydraulic-diameter and coefficient definitions used in this comparison.
+
+For matched numerical angles, the least-squares descriptor is $\Delta\mathrm{PEC}_{\theta}=33.695-1.42984(\theta/1\degree)$ with $R^2=0.973$ and RMSE 3.54 over $0\degree$--$45\degree$. The actual paired differences decrease across the sampled angles. Matched normalized-height differences remain positive, averaging 42.01 with a sample standard deviation of 7.77 across $h/l=0.08$--$0.20$; their linear fit has $R^2=0.087$. These are descriptive results for the tested one-factor cases, not validated correlations for other geometries or operating conditions.
+
+The targeted combination $\theta_d=45\degree$, $h_d=5.0$~mm gives PEC = 305.14, the highest constructed score. It is 6.99\% above the corresponding 3.5~mm dimple-angle case and 21.57\% above the 5.0~mm dimple-height case at $0\degree$. Its score is 3.56\% above the 5.0~mm capsule case (294.64); a numerically resolved superiority is not established without quantified uncertainty.
+
+These findings are specific to the tested $0\degree$--$45\degree$ angles, 2--5~mm heights, water properties, $\mathrm{Re}=4282$ and unit-cell boundary conditions. Four one-factor sweeps and one combined case do not establish a global optimum across untested parameter interactions. The thermal results characterize heating with a prescribed inlet temperature and a streamwise quasi-periodic iteration loop for velocity and turbulence profiles; they do not establish thermal periodicity. Completion of the D3--PA validation benchmark on a consistent reporting basis, together with quantified uncertainties and tests at further Reynolds numbers, heights, angles and fluids, remains necessary.
+
+\authorcontributions{Both C.S.C. and C.S. have similar contributions to the paper and are acknowledged as the first authors. Conceptualization, S.V. and L.S.; methodology, S.V., K.I., A.D. and J.T.; software, C.S.C. and C.S.; formal analysis, C.S.C. and C.S.; investigation, C.S.C. and C.S.; resources, L.S.; data curation, C.S.C. and C.S.; writing: original draft preparation, C.S.C. and C.S.; writing: review and editing, S.V., A.D. and K.I.; visualization, C.S.C. and C.S.; supervision, L.S., S.V., K.I., J.T, and A.D.; project administration, S.V.. All authors have read and agreed to the submitted version of the manuscript.}
+
+\funding{This research received no external funding}
+
+\institutionalreview{Not applicable}
+
+\informedconsent{Not applicable}
+
+\dataavailability{The data presented in this study are available on request from the corresponding author}
+
+\acknowledgments{InKorr Pty Ltd. provided resources for this research}
+
+\conflictsofinterest{Author Mr. Lance Smith was employed by the company InKorr Pty Ltd, Melbourne, Australia.
+The remaining authors declare that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.}
+
+\useofartificialintelligence{AI or AI-assisted tools were not used in drafting any aspect of this manuscript}
+
+
+% Keep references aligned with the local review margins.
+\reftitle{References}
+\bibliography{references,energies_revision_sources}
+\PublishersNote{}
+\end{document}

@@ -1,0 +1,66 @@
+\paragraph{Calculation and Testing Sequence}
+Scheme~\ref{scheme:simulation-workflow} summarizes the following sequence for each parameter case.
+\begin{enumerate}
+  \item \textbf{Construct the domain and mesh.} Select the case from Table~\ref{tab:geom_cases}, varying only the nominated angle or height while retaining the companion parameters. Construct the capsule geometry, or retain the dimple array and change the flow-entry direction for its angle sweep. Generate the fluid-domain poly-hexacore mesh with near-wall prism layers and the mesh-quality controls in Section~\ref{sec:mesh}. Identify the inlet, outlet, two heated walls and lateral periodic pair. Evaluate $A_0$, $S_1$, $S_2$ and $D_e$, then calculate the reference speed for $\mathrm{Re}=4282$.
+  \item \textbf{Assign models and solve a period.} Apply the constant water properties, energy equation, SST $k$--$\omega$ model, coupled pressure--velocity scheme and second-order discretization listed in Table~\ref{tab:bc-settings}. Starting from the current inlet data, iterate the steady equations and check the configured residual targets. Velocity, mass-flow, pressure-drop and thermal-report trends provide separate checks on physical-output stability; low residuals alone are insufficient.
+  \item \textbf{Transfer the outlet profiles.} At the end of one period, export the outlet velocity components, $k$ and $\omega$, map them to the inlet, and apply the saved profile-scaling expressions before the next period. The velocity field is scaled to the reference mean speed and its in-plane direction is corrected to the prescribed flow-entry direction. The velocity scale factor is denoted as $a$, the inlet velocity component $u_x$, $u_y$, $u_z$, and $\omega$ will be scaled by $a$, while $k$ will be scaled by $a^2$. Keep $T_{in}=293$~K and the wall temperatures unchanged. Compare available profile and integral-output records between periods to assess hydrodynamic repeatability.
+  \item \textbf{Reduce the final fields consistently.} Batch post-processing extracts the mesh areas, area-averaged inlet/outlet pressures, separate wall heat rates and fluid-domain mass-average static temperature from the saved case/data pairs. The same expressions in Section~\ref{sec:numerical_methods} give $D_e$, $u$, $h_{ave}$, Nu and $f_F$; Equations~\eqref{eq:PEC} and~\eqref{eq:red} give PEC and RED. Signed mass and enthalpy fluxes supply separate conservation checks. Store outputs by case label, retain the geometric and flow-direction identifiers, and compare the four sweeps and the targeted combined dimple case. This automated data-reduction step does not imply that the original geometry generation and solver loop were fully automated.
+\end{enumerate}
+
+\begin{scheme}[H]
+\centering
+\begin{tikzpicture}[
+  font=\small,
+  process/.style={draw=black!65,rounded corners=2pt,fill=black!3,
+    text width=6.9cm,align=center,inner sep=6pt,minimum height=1.0cm},
+  check/.style={diamond,draw=black!65,fill=black!3,aspect=3.2,
+    text width=4.0cm,align=center,inner sep=1pt},
+  transfer/.style={draw=black!65,rounded corners=2pt,fill=blue!5,
+    text width=3.0cm,align=center,inner sep=6pt},
+  arrow/.style={-{Stealth[length=2.2mm]},semithick,draw=black!75},
+  edgeword/.style={font=\footnotesize,fill=white,inner sep=2pt}
+]
+  \node[process] (prepare) at (0,0)
+    {Select parameter case; construct fluid domain\\
+     Mesh with prism layers; check zones and quality};
+  \node[process,below=5mm of prepare] (setup)
+    {Set $D_e$ and $u$ for $\mathrm{Re}=4282$; apply models\\
+     Lateral periodic pair; $T_{in}=293$~K, $T_w=333$~K};
+  \node[process,below=5mm of setup] (solve)
+    {Steady solver iterations within one period $n$\\
+     Use current inlet velocity, $k$ and $\omega$ profiles};
+  \node[check,below=5mm of solve] (residual)
+    {Configured residual\\targets met?};
+  \node[process,below=5mm of residual] (monitor)
+    {Inspect $h_{ave}$, $\Delta p$, $\Delta k$,and $\Delta \omega$ \\
+     *$\Delta p$, $\Delta k$,and $\Delta \omega$ between inlet and outlet};
+  \node[check,below=5mm of monitor] (blocks)
+    {Are all the monitored parameters monotonic or oscillatory converged?};
+  \node[transfer,right=9mm of blocks] (map)
+    {Export profiles\\from outlet\\
+     Map and scale\\$\mathbf{u}$, $k$, $\omega$ at inlet\\
+     Keep $T_{in}=293$~K\\
+     Next Period};
+  \node[process,below=5mm of blocks] (reduce)
+    {Save final fields and monitor records\\
+     Batch reduction: $Q_1,Q_2,T_{f,ave},h_{ave},\mathrm{Nu},f_F$};
+  \node[process,below=5mm of reduce] (compare)
+    {Repeat for remaining parameter cases\\
+     Compare Nu, $f_F$, PEC and RED on the same basis};
+
+  \draw[arrow] (prepare) -- (setup);
+  \draw[arrow] (setup) -- (solve);
+  \draw[arrow] (solve) -- (residual);
+  \draw[arrow] (residual.west) -- ++(-8mm,0) |- (solve.west)
+    node[edgeword,pos=0.22,left] {No: continue};
+  \draw[arrow] (residual) -- node[edgeword,right] {Yes} (monitor);
+  \draw[arrow] (monitor) -- (blocks);
+  \draw[arrow] (blocks.east) -- node[edgeword,above] {Yes} (map.west);
+  \draw[arrow] (map.north) |- (solve.east);
+  \draw[arrow] (blocks) -- node[edgeword,right] {No} (reduce);
+  \draw[arrow] (reduce) -- (compare);
+\end{tikzpicture}
+\caption{Computational workflow and streamwise quasi-periodic iteration loop. Steady solver iterations are nested inside the reported profile-transfer sequence; the lateral periodic pair remains active throughout. Temperature is not transferred from outlet to inlet. Physical-output stability is assessed separately from the period count. The final batch-reduction stage refers to the revised post-processing of the saved solutions.}
+\label{scheme:simulation-workflow}
+\end{scheme}
+\clearpage

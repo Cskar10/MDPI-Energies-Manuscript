@@ -1,0 +1,63 @@
+The channel scale is defined using the adopted unit-cell hydraulic-diameter convention,
+\begin{equation}
+D_e=\frac{4A_0 L}{S},\qquad S=S_1+S_2 ,
+\label{eq:De}
+\end{equation}
+where $A_0$ is the inlet flow area used in the saved cases, $L=l_c=l_d=25$~mm is the inlet-to-outlet cell length, and $S_1$ and $S_2$ are the two wetted, heated wall areas. This is an effective passage-scale definition: replacing the wetted perimeter in the usual $4A/P$ expression by $S/L$ gives Equation~\eqref{eq:De} \citep{zohuri2017,thulukkanam2013}. It should not be interpreted as a local hydraulic diameter at every cross-section of the embossed passage. Its numerical value is evaluated separately from each saved mesh.
+
+The Reynolds number follows the standard definition \citep{cengel2014,thulukkanam2013},
+\begin{equation}
+\mathrm{Re}=\frac{uD_e}{\upsilon},\qquad \upsilon=\frac{\mu}{\rho}.
+\label{eq:Re}
+\end{equation}
+The prescribed reference speed is therefore $u=4282\mu/(\rho D_e)$. Equal Reynolds number does not imply equal speed when $D_e$ varies: the saved cases give $u=0.308$--$0.679$~m/s. This is the reference mean speed used to scale the recycled velocity-component profiles, not an assumption of a uniform inlet profile or a substitution for the inlet-normal bulk velocity.
+
+Fanning friction factor is adopted in this study, denoted $f_F$ (or simplified as $f$ in the plots). \citep{cengel2014,thulukkanam2013}
+\begin{equation}
+f_F=\frac{\Delta p\,D_e}{2\rho L u^2}.
+\label{eq:f}
+\end{equation}
+Here $\Delta p$ is the difference between the area-averaged static pressures at the inlet and outlet. Thus the factor 2 in the denominator is intentional for the Fanning convention. All walls are stationary, no-slip and hydraulically smooth.
+
+For constant $C_p$ and balanced inlet and outlet mass flow, the net fluid energy gain follows the steady-flow calorimetric balance \citep{thulukkanam2013,jiang2019a},
+\begin{equation}
+Q_f=\dot m C_p\left(T_{f,out}^{(E)}-T_{f,in}^{(E)}\right).
+\label{eq:Q}
+\end{equation}
+Here $b\in\{in,out\}$ identifies the inlet or outlet boundary. For constant $C_p$, the energy-balance temperature is the signed temperature flow rate divided by the net mass flow \citep[Section~25.3.1, Equations~25--16 and~25--17]{ansys2025surface}:
+\[
+T_{f,b}^{(E)}=\frac{\sum_{i\in b}\dot m_i T_i}{\sum_{i\in b}\dot m_i},
+\]
+where $\dot m_i$ is the signed face mass flow rate relative to the boundary's outward normal; the net boundary mass flow is nonzero. Where local backflow occurs, conservation is checked using signed enthalpy-flux integrals rather than substituting absolute-flux temperature averages into the calorimetric balance \citep[Section~25.1]{ansys2025surface}. The wall heat rate used below is obtained directly from both heated walls, independently of this diagnostic.
+
+For the reconstructed Nu results in Figure~\ref{figure4} and PEC comparisons in Figures~\ref{figure13}--\ref{figure15}, the case-specific reporting reference is the mass-weighted volume average of static temperature over the entire fluid domain $\Omega_f$, as defined in \citet[Section~25.4.1, Equation~25--39]{ansys2025surface}:
+\[
+T_{\mathrm{ref}}=T_{f,ave}
+=\frac{\int_{\Omega_f}\rho T\,\mathrm{d}V}{\int_{\Omega_f}\rho\,\mathrm{d}V}
+=\frac{\sum_{i\in\Omega_f}\rho_i V_i T_i}{\sum_{i\in\Omega_f}\rho_i V_i}.
+\]
+Here $V_i$, $\rho_i$ and $T_i$ are the volume, density and static temperature of fluid cell $i$. The integral is normalized by the total fluid mass, so $T_{f,ave}$ has units of temperature. It weights the mass contained in each cell, not the mass flow crossing a boundary. For the constant-density water used here, it is identical to the volume-weighted average $\sum_i V_i T_i/\sum_i V_i$. This fluid-domain average is distinct from the signed inlet and outlet temperatures $T_{f,b}^{(E)}$ used in the energy balance; it is not their arithmetic mean or difference.
+
+The average heat-transfer coefficient is obtained by area-weighted averaging of Fluent's built-in \emph{Surface Heat Transfer Coef.} over the union of \texttt{wall\_1} and \texttt{wall\_2}, with the Reference Values temperature set to the case-specific $T_{f,ave}$. The equivalent value is reconstructed directly from the saved wall heat fluxes without modifying the original solution files. For the uniform wall temperature $T_w=333$~K, the Fluent field definition and surface-averaging procedure \citep{ansys2025htc} give
+\begin{equation}
+h_{ave}
+=\frac{1}{S_1+S_2}\int_{S_1\cup S_2}
+\frac{q''}{T_w-T_{\mathrm{ref}}}\,\mathrm{d}S
+=\frac{Q_1+Q_2}{(S_1+S_2)(T_w-T_{f,ave})},
+\qquad Q_j=\int_{S_j}q''\,\mathrm{d}S .
+\label{eq:h_ave}
+\end{equation}
+Heat flux is positive from the heated walls into the water. Both wall heat rates and both wall areas therefore enter Equation~\eqref{eq:h_ave}; the individual wall coefficients are not added. This fluid-temperature-based form is consistent with the form of the mean coefficient in \citet{jiang2019a}, while the specific choice of a fluid-domain mass-average reference is defined explicitly here and is not attributed to that paper.
+
+For $\theta_c=0\degree$, the fluid-domain mass-average static temperature is $T_{\mathrm{ref}}=T_{f,ave}=296.1537$~K, giving $h_{ave}=5346.87$~W\,m$^{-2}$\,K$^{-1}$. Across all 29 cases, $T_{f,ave}$ ranges from 295.4045 to 296.7044~K; each case uses its own value. The physical inlet temperature is 293~K and both walls are prescribed at 333~K. The reporting reference does not impose an additional thermal boundary condition or change the solved temperature field, wall heat rates or flow field.
+
+The Nusselt and molecular Prandtl numbers use the standard nondimensional definitions \citep{thulukkanam2013},
+\begin{equation}
+\mathrm{Nu}=\frac{h_{ave}D_e}{\lambda},
+\label{eq:Nu}
+\end{equation}
+\begin{equation}
+\mathrm{Pr}=\frac{\mu C_p}{\lambda}=\frac{\upsilon\rho C_p}{\lambda},
+\label{eq:Pr}
+\end{equation}
+where $\lambda$ is the fluid thermal conductivity. Every case uses the same two-wall averaging and fluid-temperature-reference convention, although the numerical value of $T_{\mathrm{ref}}$ varies with the saved fluid temperatures. This postprocessing definition does not imply thermally periodic temperature profiles.
